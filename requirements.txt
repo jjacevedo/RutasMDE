@@ -1,0 +1,13 @@
+streamlit
+streamlit-folium
+folium
+osmnx
+networkx
+geopy
+langgraph
+langchain-core
+langchain-groq
+sentence-transformers
+faiss-cpu
+numpy
+python-dotenv
