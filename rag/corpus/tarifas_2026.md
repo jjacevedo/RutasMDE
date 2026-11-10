@@ -9,11 +9,9 @@ fecha_consulta: 2026-11-10
 
 # Tarifas 2026 del sistema Metro
 
-## Vigencia
+## Valor del pasaje del Metro en 2026 por perfil
 
-Las tarifas de 2026 entraron en vigor el sábado 10 de enero de 2026. Aplican igual para Metro (líneas A y B), Tranvía de Ayacucho, Metrocables urbanos (H, J, K, M, P) y Metroplús. El aumento promedio del sistema masivo fue de 12,1 %.
-
-## Valor del pasaje por perfil
+Las tarifas de 2026 del sistema Metro entraron en vigor el sábado 10 de enero de 2026 y aplican igual para Metro (líneas A y B), Tranvía de Ayacucho, Metrocables urbanos (H, J, K, M, P) y Metroplús. El aumento promedio del sistema masivo fue de 12,1 %. Valor del pasaje según el perfil de la tarjeta Cívica:
 
 - Usuario frecuente (tarjeta Cívica personalizada, perfil frecuente): 3.820 pesos. En 2025 costaba 3.430.
 - Usuario al portador o eventual (sin perfil personalizado): 4.400 pesos.
