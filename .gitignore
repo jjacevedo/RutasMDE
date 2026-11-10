@@ -218,3 +218,11 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# RutasMDE
+routing/data/*.graphml
+rag/faiss_index/
+cache/
+
+# macOS
+.DS_Store
