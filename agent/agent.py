@@ -17,11 +17,12 @@ TOOLS = [calcular_ruta, consultar_movilidad]
 MODEL_NAME = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
 RECURSION_LIMIT = 25
 SOURCES_PER_SEARCH = 2
+MAX_RETRIES = 6
 
 
 @lru_cache(maxsize=1)
 def build_graph():
-    llm = ChatGroq(model=MODEL_NAME, temperature=0).bind_tools(TOOLS)
+    llm = ChatGroq(model=MODEL_NAME, temperature=0, max_retries=MAX_RETRIES).bind_tools(TOOLS)
 
     def call_model(state: MessagesState) -> dict:
         messages = [SystemMessage(SYSTEM_PROMPT), *state["messages"]]
