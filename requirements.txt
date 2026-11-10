@@ -4,6 +4,7 @@ folium
 osmnx
 networkx
 geopy
+scikit-learn
 langgraph
 langchain-core
 langchain-groq
