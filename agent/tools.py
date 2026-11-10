@@ -57,8 +57,8 @@ def consultar_movilidad(pregunta: str) -> tuple[str, list[dict]]:
     estaciones cercanas a lugares conocidos.
     """
     results = search(pregunta, k=4)
-    content = "\n\n".join(
-        f"[{i}] {result['texto']}\nFuente: {', '.join(result['fuentes'])}"
-        for i, result in enumerate(results, 1)
+    content = "\n\n---\n\n".join(
+        f"{result['texto']}\nFuente: {', '.join(result['fuentes'])}"
+        for result in results
     )
     return content, results

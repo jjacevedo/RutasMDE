@@ -15,6 +15,8 @@ load_dotenv()
 
 TOOLS = [calcular_ruta, consultar_movilidad]
 MODEL_NAME = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
+RECURSION_LIMIT = 25
+SOURCES_PER_SEARCH = 2
 
 
 @lru_cache(maxsize=1)
@@ -49,7 +51,7 @@ def run_agent(user_message: str, chat_history: list) -> dict:
     try:
         result = build_graph().invoke(
             {"messages": [*history, HumanMessage(user_message)]},
-            {"recursion_limit": 10},
+            {"recursion_limit": RECURSION_LIMIT},
         )
     except GraphRecursionError:
         return {
@@ -66,7 +68,7 @@ def run_agent(user_message: str, chat_history: list) -> dict:
         if message.name == "calcular_ruta":
             route = message.artifact
         elif message.name == "consultar_movilidad":
-            for chunk in message.artifact:
+            for chunk in message.artifact[:SOURCES_PER_SEARCH]:
                 label = f"{chunk['titulo']} - {chunk['seccion']}"
                 if label not in sources:
                     sources.append(label)
