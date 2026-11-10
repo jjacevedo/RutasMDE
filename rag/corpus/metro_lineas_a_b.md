@@ -36,7 +36,7 @@ Estaciones de oriente a occidente: San Antonio, Cisneros, Suramericana, Estadio,
 
 - San Antonio: transferencia con la Línea A y el Tranvía de Ayacucho.
 - Estadio: acceso al Estadio Atanasio Girardot y la Unidad Deportiva.
-- San Javier: conexión con el Metrocable Línea J y acceso a la Comuna 13.
+- San Javier (terminal occidental de la Línea B): conexión con el Metrocable Línea J y acceso a la Comuna 13.
 
 ## Proyectos en desarrollo
 

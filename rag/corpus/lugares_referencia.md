@@ -38,6 +38,15 @@ nota: recopilación del equipo a partir del mapa de la red Metro; verificar dist
 - Aeropuerto Olaya Herrera: en Guayabal; no tiene estación de Metro directa.
 - Aeropuerto José María Córdova: está en Rionegro, fuera del Valle de Aburrá; se llega por la Avenida Las Palmas o el túnel de Oriente, en bus o taxi.
 
+## Municipios del sur y del norte del Valle de Aburrá
+
+- Envigado (Parque de Envigado y centro del municipio): la estación del Metro del municipio es Envigado, Línea A. Desde el parque principal se llega a la estación en bus o caminando.
+- Itagüí (Parque de Itagüí y centro del municipio): estaciones Itagüí y Ayurá, Línea A.
+- Sabaneta (Parque de Sabaneta): estación Sabaneta, Línea A.
+- La Estrella: estación La Estrella, terminal sur de la Línea A.
+- Bello (Parque de Bello y centro del municipio): estaciones Bello y Madera, Línea A. La estación Niquía, terminal norte de la Línea A, también queda en Bello.
+- Para ir entre el sur y el norte del Valle de Aburrá en transporte público, la Línea A recorre todo el valle sin transbordos, desde La Estrella hasta Niquía.
+
 ## Centros comerciales
 
 - Centro Comercial Santafé y El Tesoro: en El Poblado; las estaciones más cercanas son Aguacatala y Poblado, con bus o taxi.

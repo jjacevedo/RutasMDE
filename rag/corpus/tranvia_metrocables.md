@@ -27,7 +27,7 @@ Estaciones: Acevedo, Andalucía, Popular, Santo Domingo Savio. Longitud: 2,07 km
 
 ## Línea L (Arví)
 
-Línea turística que sale de Santo Domingo Savio (terminal de la Línea K) y sube unos 15 minutos, sin estaciones intermedias, hasta el Parque Arví en el corregimiento de Santa Elena. Tiene tarifa propia, distinta a la del Metro (alrededor de 12.500 pesos por trayecto según la fuente consultada). Horario: de martes a sábado de 9:00 a.m. a 6:00 p.m.; domingos y festivos de 8:30 a.m. a 6:00 p.m. No opera el primer día hábil de la semana.
+Línea turística que lleva al Parque Arví. Cómo llegar desde el Metro: tomar la Línea A hasta la estación Acevedo, transbordar al Metrocable Línea K hasta Santo Domingo Savio y allí transbordar a la Línea L. La Línea L sale de Santo Domingo Savio (terminal de la Línea K) y sube unos 15 minutos, sin estaciones intermedias, hasta el Parque Arví en el corregimiento de Santa Elena. Tiene tarifa propia, distinta a la del Metro (alrededor de 12.500 pesos por trayecto según la fuente consultada). Horario: de martes a sábado de 9:00 a.m. a 6:00 p.m.; domingos y festivos de 8:30 a.m. a 6:00 p.m. No opera el primer día hábil de la semana.
 
 ## Línea J
 

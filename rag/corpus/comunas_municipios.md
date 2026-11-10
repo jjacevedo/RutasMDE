@@ -21,7 +21,7 @@ El área urbana de Medellín se divide en 16 comunas agrupadas en 6 zonas, y el 
 
 ## Comunas de la zona noroccidental
 
-- Comuna 5, Castilla: Castilla, Tricentenario, Toscana, Boyacá, Francisco Antonio Zea. La sirven las estaciones Tricentenario y Caribe y el Metrocable Línea P.
+- Comuna 5, Castilla: Castilla, Tricentenario, Toscana, Boyacá, Francisco Antonio Zea. La sirven las estaciones Tricentenario y Caribe (Línea A) y el Metrocable Línea P.
 - Comuna 6, Doce de Octubre: Doce de Octubre, Pedregal, Picacho. La sirve el Metrocable Línea P.
 - Comuna 7, Robledo: Robledo y barrios vecinos; acceso por el Metrocable Línea J.
 
@@ -29,17 +29,17 @@ El área urbana de Medellín se divide en 16 comunas agrupadas en 6 zonas, y el 
 
 - Comuna 8, Villa Hermosa: Villa Hermosa, La Sierra, Enciso. La sirven el Tranvía de Ayacucho y el Metrocable Línea H.
 - Comuna 9, Buenos Aires: Buenos Aires, Miraflores, Loyola, Ocho de Marzo. La sirven el Tranvía de Ayacucho y el Metrocable Línea M.
-- Comuna 10, La Candelaria: el centro de Medellín, con Prado, Boston, San Benito, San Diego, Guayaquil. La sirven las estaciones Prado, Parque Berrío, San Antonio y Alpujarra.
+- Comuna 10, La Candelaria: el centro de Medellín, con Prado, Boston, San Benito, San Diego, Guayaquil. La sirven las estaciones Prado, Parque Berrío, San Antonio y Alpujarra (Línea A); San Antonio también es estación de la Línea B y del Tranvía de Ayacucho.
 
 ## Comunas de la zona centro occidental
 
 - Comuna 11, Laureles-Estadio: Laureles, Conquistadores, Las Acacias, La Castellana, Estadio. Aquí está la carrera 70 y la estación Estadio de la Línea B.
 - Comuna 12, La América: La Floresta, La América, Calasanz, Santa Mónica, Santa Lucía. La sirven las estaciones Floresta y Santa Lucía de la Línea B.
-- Comuna 13, San Javier: San Javier, El Socorro, Belencito, Betania, El Salado. Famosa por las escaleras eléctricas y el grafitur; la sirven la estación San Javier y el Metrocable Línea J.
+- Comuna 13, San Javier: San Javier, El Socorro, Belencito, Betania, El Salado. Famosa por las escaleras eléctricas y el grafitur. La estación del Metro que sirve a la Comuna 13 es San Javier, terminal occidental de la Línea B (no de la Línea A); allí conecta el Metrocable Línea J.
 
 ## Comunas de la zona suroriental y suroccidental
 
-- Comuna 14, El Poblado: Manila, Provenza, Lleras, Astorga, Patio Bonito. La sirven las estaciones Poblado y Aguacatala.
+- Comuna 14, El Poblado: Manila, Provenza, Lleras, Astorga, Patio Bonito. La sirven las estaciones Poblado y Aguacatala (Línea A).
 - Comuna 15, Guayabal: Guayabal, Trinidad, Barrio Antioquia, Cristo Rey. Allí queda el aeropuerto Olaya Herrera.
 - Comuna 16, Belén: Belén, La Mota, Rosales, Fátima. Aquí termina la Línea 1 de Metroplús (estación Universidad de Medellín).
 
