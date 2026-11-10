@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "categoria": "ruta",
+    "pregunta": "¿Cómo llego de EAFIT al Parque Explora?",
+    "espera_ruta": true,
+    "herramientas": ["calcular_ruta", "consultar_movilidad"],
+    "datos_clave": [["aguacatala", "poblado"], ["universidad"]]
+  },
+  {
+    "id": 2,
+    "categoria": "ruta",
+    "pregunta": "¿Cuál es la ruta más rápida en carro de Laureles a El Poblado?",
+    "espera_ruta": true,
+    "herramientas": ["calcular_ruta"],
+    "datos_clave": []
+  },
+  {
+    "id": 3,
+    "categoria": "ruta",
+    "pregunta": "Necesito ir del Parque de Envigado a la estación Niquía",
+    "espera_ruta": true,
+    "herramientas": ["calcular_ruta"],
+    "datos_clave": []
+  },
+  {
+    "id": 4,
+    "categoria": "tarifas",
+    "pregunta": "¿Cuánto cuesta el pasaje del Metro para estudiantes?",
+    "espera_ruta": false,
+    "herramientas": ["consultar_movilidad"],
+    "datos_clave": [["1.600"]]
+  },
+  {
+    "id": 5,
+    "categoria": "tarifas",
+    "pregunta": "¿Cuánto vale el pasaje del Metro si no tengo la Cívica personalizada?",
+    "espera_ruta": false,
+    "herramientas": ["consultar_movilidad"],
+    "datos_clave": [["4.400"]]
+  },
+  {
+    "id": 6,
+    "categoria": "horarios",
+    "pregunta": "¿A qué hora abre el Metro los domingos?",
+    "espera_ruta": false,
+    "herramientas": ["consultar_movilidad"],
+    "datos_clave": [["5:00", "5 a.m", "5 am"]]
+  },
+  {
+    "id": 7,
+    "categoria": "horarios",
+    "pregunta": "¿A qué hora empieza a funcionar el Metrocable línea K los domingos?",
+    "espera_ruta": false,
+    "herramientas": ["consultar_movilidad"],
+    "datos_clave": [["8:30"]]
+  },
+  {
+    "id": 8,
+    "categoria": "pico_y_placa",
+    "pregunta": "Mi carro tiene placa terminada en 4, ¿qué día tengo pico y placa?",
+    "espera_ruta": false,
+    "herramientas": ["consultar_movilidad"],
+    "datos_clave": [["martes"]]
+  },
+  {
+    "id": 9,
+    "categoria": "pico_y_placa",
+    "pregunta": "Para el pico y placa de motos, ¿qué dígito de la placa cuenta?",
+    "espera_ruta": false,
+    "herramientas": ["consultar_movilidad"],
+    "datos_clave": [["primer"]]
+  },
+  {
+    "id": 10,
+    "categoria": "encicla",
+    "pregunta": "¿Cuánto tiempo máximo puedo usar una bicicleta eléctrica de EnCicla?",
+    "espera_ruta": false,
+    "herramientas": ["consultar_movilidad"],
+    "datos_clave": [["30"]]
+  },
+  {
+    "id": 11,
+    "categoria": "metrocable",
+    "pregunta": "¿Cómo llego al Parque Arví en transporte público?",
+    "espera_ruta": null,
+    "herramientas": ["consultar_movilidad"],
+    "datos_clave": [["acevedo"], ["santo domingo"]]
+  },
+  {
+    "id": 12,
+    "categoria": "normas",
+    "pregunta": "¿A qué distancia mínima debe pasar un carro al adelantar a un ciclista?",
+    "espera_ruta": false,
+    "herramientas": ["consultar_movilidad"],
+    "datos_clave": [["1,5", "1.5"]]
+  },
+  {
+    "id": 13,
+    "categoria": "comunas",
+    "pregunta": "¿Qué estación del Metro sirve a la Comuna 13?",
+    "espera_ruta": false,
+    "herramientas": ["consultar_movilidad"],
+    "datos_clave": [["san javier"]]
+  },
+  {
+    "id": 14,
+    "categoria": "fuera_de_alcance",
+    "pregunta": "¿Quién ganó el último Mundial de fútbol?",
+    "espera_ruta": false,
+    "herramientas": [],
+    "datos_clave": [["movilidad"]]
+  },
+  {
+    "id": 15,
+    "categoria": "sin_dato_en_corpus",
+    "pregunta": "¿Cuánto cuesta un taxi del aeropuerto José María Córdova a El Poblado?",
+    "espera_ruta": null,
+    "herramientas": ["consultar_movilidad"],
+    "datos_clave": [["no encontr", "no tengo", "no aparece", "no dispongo", "no cuento", "no incluye", "no esta"]]
+  }
+]

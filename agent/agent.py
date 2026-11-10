@@ -58,12 +58,17 @@ def run_agent(user_message: str, chat_history: list) -> dict:
             "response": "No pude completar la consulta. ¿Puedes reformularla con más detalle?",
             "route": None,
             "sources": [],
+            "tools": [],
         }
 
     route = None
     sources = []
+    tools_used = []
     for message in result["messages"][len(history) + 1:]:
-        if not isinstance(message, ToolMessage) or message.artifact is None:
+        if not isinstance(message, ToolMessage):
+            continue
+        tools_used.append(message.name)
+        if message.artifact is None:
             continue
         if message.name == "calcular_ruta":
             route = message.artifact
@@ -77,4 +82,5 @@ def run_agent(user_message: str, chat_history: list) -> dict:
         "response": result["messages"][-1].content,
         "route": route,
         "sources": sources,
+        "tools": tools_used,
     }
