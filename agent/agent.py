@@ -1,51 +1,78 @@
-"""Mock temporal de run_agent(). Se reemplaza por el agente real en la integración."""
+import os
+from functools import lru_cache
 
-MOCK_ROUTE = {
-    "coords": [
-        (6.2006, -75.5783),
-        (6.2081, -75.5768),
-        (6.2189, -75.5735),
-        (6.2350, -75.5702),
-        (6.2512, -75.5680),
-        (6.2635, -75.5662),
-        (6.2710, -75.5655),
-    ],
-    "origin_coords": (6.2006, -75.5783),
-    "dest_coords": (6.2710, -75.5655),
-    "distance_km": 9.4,
-    "time_min": 24.0,
-    "nodes_expanded": 347,
-    "origin_name": "Universidad EAFIT, El Poblado",
-    "dest_name": "Parque Explora, Sevilla",
-}
+from dotenv import load_dotenv
+from langchain_core.messages import AIMessage, HumanMessage, SystemMessage, ToolMessage
+from langchain_groq import ChatGroq
+from langgraph.errors import GraphRecursionError
+from langgraph.graph import END, START, MessagesState, StateGraph
+from langgraph.prebuilt import ToolNode, tools_condition
 
-ROUTE_KEYWORDS = ("ruta", "llego", "llegar", "ir de", "como voy", "cómo voy")
+from agent.prompts import SYSTEM_PROMPT
+from agent.tools import calcular_ruta, consultar_movilidad
+
+load_dotenv()
+
+TOOLS = [calcular_ruta, consultar_movilidad]
+MODEL_NAME = os.getenv("GROQ_MODEL", "openai/gpt-oss-120b")
+
+
+@lru_cache(maxsize=1)
+def build_graph():
+    llm = ChatGroq(model=MODEL_NAME, temperature=0).bind_tools(TOOLS)
+
+    def call_model(state: MessagesState) -> dict:
+        messages = [SystemMessage(SYSTEM_PROMPT), *state["messages"]]
+        return {"messages": [llm.invoke(messages)]}
+
+    graph = StateGraph(MessagesState)
+    graph.add_node("modelo", call_model)
+    graph.add_node("herramientas", ToolNode(TOOLS))
+    graph.add_edge(START, "modelo")
+    graph.add_conditional_edges("modelo", tools_condition, {"tools": "herramientas", END: END})
+    graph.add_edge("herramientas", "modelo")
+    return graph.compile()
+
+
+def _to_messages(chat_history: list) -> list:
+    messages = []
+    for turn in chat_history:
+        if turn["role"] == "user":
+            messages.append(HumanMessage(turn["content"]))
+        elif turn["role"] == "assistant":
+            messages.append(AIMessage(turn["content"]))
+    return messages
 
 
 def run_agent(user_message: str, chat_history: list) -> dict:
-    text = user_message.lower()
-
-    if any(keyword in text for keyword in ROUTE_KEYWORDS):
+    history = _to_messages(chat_history)
+    try:
+        result = build_graph().invoke(
+            {"messages": [*history, HumanMessage(user_message)]},
+            {"recursion_limit": 10},
+        )
+    except GraphRecursionError:
         return {
-            "response": (
-                "Para ir de la Universidad EAFIT al Parque Explora hay unos 9.4 km "
-                "en carro, aproximadamente 24 minutos. En transporte público puedes "
-                "tomar el Metro en la estación Aguacatala hacia el norte y bajarte "
-                "en la estación Universidad."
-            ),
-            "route": MOCK_ROUTE,
-            "sources": [
-                "La Línea A del Metro de Medellín conecta La Estrella con Niquía.",
-                "La estación Universidad queda junto al Parque Explora y el Jardín Botánico.",
-            ],
+            "response": "No pude completar la consulta. ¿Puedes reformularla con más detalle?",
+            "route": None,
+            "sources": [],
         }
 
+    route = None
+    sources = []
+    for message in result["messages"][len(history) + 1:]:
+        if not isinstance(message, ToolMessage) or message.artifact is None:
+            continue
+        if message.name == "calcular_ruta":
+            route = message.artifact
+        elif message.name == "consultar_movilidad":
+            for chunk in message.artifact:
+                label = f"{chunk['titulo']} - {chunk['seccion']}"
+                if label not in sources:
+                    sources.append(label)
+
     return {
-        "response": (
-            "Soy RutasMDE, tu copiloto de movilidad en Medellín. Puedo calcular "
-            "rutas entre dos lugares y responder preguntas sobre el Metro, "
-            "EnCicla y el transporte público de la ciudad."
-        ),
-        "route": None,
-        "sources": [],
+        "response": result["messages"][-1].content,
+        "route": route,
+        "sources": sources,
     }
