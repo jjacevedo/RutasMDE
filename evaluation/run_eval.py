@@ -35,6 +35,13 @@ def check_facts(groups: list[list[str]], response: str) -> bool | None:
     return all(any(normalize(option) in text for option in group) for group in groups)
 
 
+def check_sources(expected: list[str], sources: list[str]) -> bool | None:
+    if not expected:
+        return None
+    labels = [normalize(source) for source in sources]
+    return any(normalize(title) in label for title in expected for label in labels)
+
+
 def ask(question: str) -> dict:
     try:
         return run_agent(question, [])
@@ -61,6 +68,7 @@ def main() -> None:
             "ruta_ok": check_route(question["espera_ruta"], route),
             "herramientas_ok": check_tools(question["herramientas"], answer["tools"]),
             "datos_ok": check_facts(question["datos_clave"], answer["response"]),
+            "fuente_ok": check_sources(question["fuentes_esperadas"], answer["sources"]),
             "latencia_s": round(latency, 2),
             "revision_manual": "",
         }
@@ -68,12 +76,12 @@ def main() -> None:
         print(
             f"{question['id']:>2} {question['categoria']:<20} "
             f"ruta={result['ruta_ok']} herramientas={result['herramientas_ok']} "
-            f"datos={result['datos_ok']} {latency:.1f}s"
+            f"datos={result['datos_ok']} fuente={result['fuente_ok']} {latency:.1f}s"
         )
         time.sleep(PAUSE_SECONDS)
 
     summary = {}
-    for key in ("ruta_ok", "herramientas_ok", "datos_ok"):
+    for key in ("ruta_ok", "herramientas_ok", "datos_ok", "fuente_ok"):
         evaluated = [result[key] for result in results if result[key] is not None]
         summary[key] = f"{sum(evaluated)}/{len(evaluated)}"
     summary["latencia_promedio_s"] = round(sum(r["latencia_s"] for r in results) / len(results), 2)

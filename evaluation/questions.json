@@ -16,6 +16,9 @@
       [
         "universidad"
       ]
+    ],
+    "fuentes_esperadas": [
+      "Lugares de referencia"
     ]
   },
   {
@@ -26,7 +29,8 @@
     "herramientas": [
       "calcular_ruta"
     ],
-    "datos_clave": []
+    "datos_clave": [],
+    "fuentes_esperadas": []
   },
   {
     "id": 3,
@@ -36,7 +40,8 @@
     "herramientas": [
       "calcular_ruta"
     ],
-    "datos_clave": []
+    "datos_clave": [],
+    "fuentes_esperadas": []
   },
   {
     "id": 4,
@@ -50,6 +55,9 @@
       [
         "1.600"
       ]
+    ],
+    "fuentes_esperadas": [
+      "Tarifas 2026"
     ]
   },
   {
@@ -64,6 +72,9 @@
       [
         "4.400"
       ]
+    ],
+    "fuentes_esperadas": [
+      "Tarifas 2026"
     ]
   },
   {
@@ -80,6 +91,9 @@
         "5 a.m",
         "5 am"
       ]
+    ],
+    "fuentes_esperadas": [
+      "Horarios"
     ]
   },
   {
@@ -94,6 +108,10 @@
       [
         "8:30"
       ]
+    ],
+    "fuentes_esperadas": [
+      "Horarios",
+      "Metrocable"
     ]
   },
   {
@@ -108,6 +126,9 @@
       [
         "martes"
       ]
+    ],
+    "fuentes_esperadas": [
+      "Pico y placa"
     ]
   },
   {
@@ -122,6 +143,9 @@
       [
         "primer"
       ]
+    ],
+    "fuentes_esperadas": [
+      "Pico y placa"
     ]
   },
   {
@@ -136,6 +160,9 @@
       [
         "30"
       ]
+    ],
+    "fuentes_esperadas": [
+      "EnCicla"
     ]
   },
   {
@@ -153,6 +180,10 @@
       [
         "santo domingo"
       ]
+    ],
+    "fuentes_esperadas": [
+      "Metrocable",
+      "Lugares de referencia"
     ]
   },
   {
@@ -168,6 +199,9 @@
         "1,5",
         "1.5"
       ]
+    ],
+    "fuentes_esperadas": [
+      "Normas de tránsito"
     ]
   },
   {
@@ -182,6 +216,11 @@
       [
         "san javier"
       ]
+    ],
+    "fuentes_esperadas": [
+      "Comunas",
+      "Metro de Medellín, líneas A y B",
+      "Lugares de referencia"
     ]
   },
   {
@@ -194,7 +233,8 @@
       [
         "movilidad"
       ]
-    ]
+    ],
+    "fuentes_esperadas": []
   },
   {
     "id": 15,
@@ -218,6 +258,7 @@
         "no se encuentra",
         "no figura"
       ]
-    ]
+    ],
+    "fuentes_esperadas": []
   }
 ]
