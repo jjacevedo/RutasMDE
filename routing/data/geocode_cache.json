@@ -1,0 +1,177 @@
+{
+  "aeropuerto olaya herrera": {
+    "lat": 6.2200225,
+    "lon": -75.5890373,
+    "name": "Aeropuerto Olaya Herrera"
+  },
+  "aeropuerto olaya herrera, medellin": {
+    "lat": 6.2200225,
+    "lon": -75.5890373,
+    "name": "Aeropuerto Olaya Herrera"
+  },
+  "avenida el poblado": {
+    "lat": 6.2262413,
+    "lon": -75.5692574,
+    "name": "Avenida El Poblado"
+  },
+  "belen, medellin": {
+    "lat": 6.2258758,
+    "lon": -75.6004937,
+    "name": "Belén (Comuna 16)"
+  },
+  "buenos aires, medellin": {
+    "lat": 6.2302293,
+    "lon": -75.5569207,
+    "name": "Buenos Aires (Comuna 9)"
+  },
+  "castilla, medellin": {
+    "lat": 6.2936989,
+    "lon": -75.5682636,
+    "name": "Castilla (Comuna 5)"
+  },
+  "centro comercial santafe": {
+    "lat": 6.1964218,
+    "lon": -75.5738748,
+    "name": "Centro Comercial Santafé"
+  },
+  "centro comercial santafe, medellin": {
+    "lat": 6.1964218,
+    "lon": -75.5738748,
+    "name": "Centro Comercial Santafé"
+  },
+  "centro, medellin": {
+    "lat": 6.2501048,
+    "lon": -75.5680187,
+    "name": "Centro, La Candelaria (Comuna 10)"
+  },
+  "comuna 13, medellin": {
+    "lat": 6.2562742,
+    "lon": -75.6215434,
+    "name": "Comuna 13 - San Javier"
+  },
+  "eafit": {
+    "lat": 6.2002022,
+    "lon": -75.5784855,
+    "name": "Universidad EAFIT, El Poblado"
+  },
+  "el poblado": {
+    "lat": 6.2006197,
+    "lon": -75.5636832,
+    "name": "El Poblado (Comuna 14)"
+  },
+  "el poblado, medellin": {
+    "lat": 6.2006197,
+    "lon": -75.5636832,
+    "name": "El Poblado (Comuna 14)"
+  },
+  "envigado": {
+    "lat": 6.1701348,
+    "lon": -75.587415,
+    "name": "Envigado"
+  },
+  "envigado, antioquia": {
+    "lat": 6.1701348,
+    "lon": -75.587415,
+    "name": "Envigado"
+  },
+  "estacion industriales": {
+    "lat": 6.23,
+    "lon": -75.57556,
+    "name": "Estación Industriales (Metro línea A)"
+  },
+  "estacion san antonio": {
+    "lat": 6.2471163,
+    "lon": -75.5696992,
+    "name": "Estación San Antonio (Metro)"
+  },
+  "estadio atanasio girardot": {
+    "lat": 6.2568267,
+    "lon": -75.5901467,
+    "name": "Estadio Atanasio Girardot"
+  },
+  "estadio, medellin": {
+    "lat": 6.2568267,
+    "lon": -75.5901467,
+    "name": "Estadio Atanasio Girardot"
+  },
+  "industriales, medellin": {
+    "lat": 6.23,
+    "lon": -75.57556,
+    "name": "Estación Industriales (Metro línea A)"
+  },
+  "itagui": {
+    "lat": 6.1724352,
+    "lon": -75.6093254,
+    "name": "Itagüí"
+  },
+  "itagui, antioquia": {
+    "lat": 6.1724352,
+    "lon": -75.6093254,
+    "name": "Itagüí"
+  },
+  "laureles": {
+    "lat": 6.2419995,
+    "lon": -75.5958328,
+    "name": "Laureles (Comuna 11)"
+  },
+  "laureles, medellin": {
+    "lat": 6.2419995,
+    "lon": -75.5958328,
+    "name": "Laureles (Comuna 11)"
+  },
+  "parque berrio": {
+    "lat": 6.2500151,
+    "lon": -75.568136,
+    "name": "Parque Berrío, La Candelaria"
+  },
+  "parque berrio, medellin": {
+    "lat": 6.2500151,
+    "lon": -75.568136,
+    "name": "Parque Berrío, La Candelaria"
+  },
+  "parque explora": {
+    "lat": 6.2706212,
+    "lon": -75.5655752,
+    "name": "Parque Explora"
+  },
+  "parque explora, medellin": {
+    "lat": 6.2706212,
+    "lon": -75.5655752,
+    "name": "Parque Explora"
+  },
+  "san antonio, medellin": {
+    "lat": 6.2471163,
+    "lon": -75.5696992,
+    "name": "Estación San Antonio (Metro)"
+  },
+  "udea": {
+    "lat": 6.2679795,
+    "lon": -75.5687589,
+    "name": "Universidad de Antioquia, Ciudad Universitaria"
+  },
+  "universidad de antioquia": {
+    "lat": 6.2679795,
+    "lon": -75.5687589,
+    "name": "Universidad de Antioquia, Ciudad Universitaria"
+  },
+  "universidad de antioquia, medellin": {
+    "lat": 6.2679795,
+    "lon": -75.5687589,
+    "name": "Universidad de Antioquia, Ciudad Universitaria"
+  },
+  "universidad eafit": {
+    "lat": 6.2002022,
+    "lon": -75.5784855,
+    "name": "Universidad EAFIT, El Poblado"
+  },
+  "universidad nacional": {
+    "lat": 6.262958,
+    "lon": -75.5771705,
+    "name": "Universidad Nacional, sede Medellín"
+  },
+  "universidad nacional, medellin": {
+    "lat": 6.262958,
+    "lon": -75.5771705,
+    "name": "Universidad Nacional, sede Medellín"
+  }
+}
