@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import html
 import os
 
 import streamlit as st
@@ -11,40 +12,59 @@ from dotenv import load_dotenv
 from dashboard.map_utils import build_route_map, load_encicla_stations, load_metro_stations
 from dashboard.state import add_message, clear_conversation, initialize_state
 
-st.set_page_config(page_title="RutasMDE · Movilidad", page_icon="🧭", layout="wide", initial_sidebar_state="expanded")
+st.set_page_config(page_title="RutasMDE · Movilidad", page_icon=":material/route:", layout="wide", initial_sidebar_state="auto")
 load_dotenv()
 initialize_state(st.session_state)
 
 st.markdown("""
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap');
-  :root { --ink:#14243a; --muted:#607086; --brand:#176b5b; --line:#e5ebef; }
-  html, body, [class*="css"] { font-family:'DM Sans',sans-serif; }
-  .stApp { background:linear-gradient(180deg,#f4f8f7 0,#f7f9fb 280px); color:var(--ink); }
-  h1,h2,h3 { font-family:'Manrope',sans-serif; letter-spacing:-.035em; }
-  .hero { padding:1.1rem 0 .65rem; }
-  .eyebrow { color:#176b5b; font-size:.74rem; font-weight:700; letter-spacing:.13em; text-transform:uppercase; }
-  .hero h1 { font-size:2.35rem; margin:.15rem 0 .25rem; }
-  .hero p { color:#607086; margin:0; }
-  [data-testid="stMetric"] { background:white; border:1px solid #e5ebef; padding:1rem 1.1rem; border-radius:16px; box-shadow:0 5px 18px #213d4a0a; }
-  [data-testid="stMetricLabel"] { color:#607086; }
-  div[data-testid="stVerticalBlockBorderWrapper"] { border-radius:16px; }
-  .stButton button, .stFormSubmitButton button { border-radius:11px; font-weight:600; }
-  .small-note { color:#718096; font-size:.83rem; }
-  @media (max-width: 760px) { .hero h1 { font-size:1.8rem; } }
+  @import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&display=swap');
+  :root { --ink:#1C1B19; --muted:#6B665E; --accent:#33443A; --line:#E4DFD4; --surface:#FFFFFF; --metro:#8A5A44; --encicla:#4F6B7A; }
+  h1, h2, h3 { letter-spacing:-.02em; font-weight:600; }
+  .hero { padding:.5rem 0 1.25rem; }
+  .hero h1 { font-size:2rem; line-height:1.15; margin:0 0 .35rem; padding:0; }
+  .hero p { color:var(--muted); margin:0; max-width:60ch; }
+  .brand { display:flex; align-items:center; gap:.55rem; font-weight:600; font-size:1.05rem; color:var(--ink); }
+  .route-summary { display:grid; grid-template-columns:auto auto 1fr; background:var(--surface); border:1px solid var(--line); border-radius:.6rem; margin-bottom:1.5rem; }
+  .route-summary > div { padding:.9rem 1.25rem; min-width:0; }
+  .route-summary > div + div { border-left:1px solid var(--line); }
+  .route-summary .k { display:block; color:var(--muted); font-size:.8rem; margin-bottom:.15rem; }
+  .route-summary .v { display:block; font-size:1.35rem; font-weight:600; font-variant-numeric:tabular-nums; white-space:nowrap; }
+  .route-summary .v.place { font-size:1rem; font-weight:500; white-space:normal; line-height:1.4; padding-top:.2rem; }
+  .route-empty { color:var(--muted); background:var(--surface); border:1px solid var(--line); border-radius:.6rem; padding:.9rem 1.25rem; margin-bottom:1.5rem; }
+  .chat-empty { color:var(--muted); margin:.25rem 0; line-height:1.6; }
+  .legend { display:flex; flex-wrap:wrap; gap:.4rem 1.1rem; color:var(--muted); font-size:.82rem; margin-top:.5rem; }
+  .legend span { display:inline-flex; align-items:center; gap:.4rem; }
+  .legend i { width:.6rem; height:.6rem; border-radius:50%; display:inline-block; box-sizing:border-box; }
+  .small-note { color:var(--muted); font-size:.83rem; line-height:1.5; }
+  .stButton button, .stFormSubmitButton button { min-height:44px; font-weight:500; transition:transform .15s cubic-bezier(.2,.8,.2,1), background-color .15s; }
+  .stButton button:active, .stFormSubmitButton button:active { transform:scale(.98); }
+  .stButton button:focus-visible, .stFormSubmitButton button:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+  @media (max-width: 760px) {
+    .hero h1 { font-size:1.6rem; }
+    .route-summary { grid-template-columns:1fr 1fr; }
+    .route-summary > div:nth-child(3) { grid-column:1 / -1; border-left:0; border-top:1px solid var(--line); }
+  }
+  @media (prefers-reduced-motion: reduce) { .stButton button, .stFormSubmitButton button { transition:none; } }
 </style>
 """, unsafe_allow_html=True)
 
 st.markdown("""
 <div class="hero">
-  <div class="eyebrow">Tu copiloto de movilidad</div>
   <h1>Muévete mejor por Medellín</h1>
   <p>Pregunta por una ruta o resuelve dudas sobre el transporte del Valle de Aburrá.</p>
 </div>
 """, unsafe_allow_html=True)
 
 with st.sidebar:
-    st.markdown("### 🧭 RutasMDE")
+    st.markdown("""
+<div class="brand">
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1C1B19" stroke-width="1.75" stroke-linecap="round" aria-hidden="true">
+    <circle cx="5" cy="18" r="2.2"/><circle cx="19" cy="6" r="2.2" fill="#1C1B19"/><path d="M7 17c5 0 3-10 10-10.5"/>
+  </svg>
+  RutasMDE
+</div>
+""", unsafe_allow_html=True)
     st.caption("Asistente de movilidad · EAFIT")
     st.divider()
     st.markdown("**Capas del mapa**")
@@ -58,15 +78,23 @@ with st.sidebar:
     st.markdown("<p class='small-note'>Las rutas se calculan sobre el grafo vial disponible. Las capas de transporte son puntos de referencia; no representan una ruta multimodal.</p>", unsafe_allow_html=True)
 
 route = st.session_state.last_route
-metric_cols = st.columns(3)
 if route:
-    metric_cols[0].metric("Distancia", f"{route['distance_km']:.2f} km" if isinstance(route.get("distance_km"), (int, float)) else "—")
-    metric_cols[1].metric("Tiempo estimado", f"{route['time_min']:.1f} min" if isinstance(route.get("time_min"), (int, float)) else "—")
-    metric_cols[2].metric("Recorrido", f"{route.get('origin_name') or 'Origen'} → {route.get('dest_name') or 'Destino'}")
+    distance = f"{route['distance_km']:.2f} km" if isinstance(route.get("distance_km"), (int, float)) else "Sin dato"
+    duration = f"{route['time_min']:.1f} min" if isinstance(route.get("time_min"), (int, float)) else "Sin dato"
+    origin_name = html.escape(str(route.get("origin_name") or "Origen"))
+    dest_name = html.escape(str(route.get("dest_name") or "Destino"))
+    st.markdown(f"""
+<div class="route-summary">
+  <div><span class="k">Distancia</span><span class="v">{distance}</span></div>
+  <div><span class="k">Tiempo en carro, sin tráfico</span><span class="v">{duration}</span></div>
+  <div><span class="k">Recorrido</span><span class="v place">{origin_name} → {dest_name}</span></div>
+</div>
+""", unsafe_allow_html=True)
 else:
-    metric_cols[0].metric("Distancia", "—", help="Aparecerá cuando el agente calcule una ruta")
-    metric_cols[1].metric("Tiempo estimado", "—", help="Aparecerá cuando el agente calcule una ruta")
-    metric_cols[2].metric("Ruta activa", "Sin ruta")
+    st.markdown(
+        "<div class='route-empty'>Aún no hay ruta. Pide una en el chat y aquí verás la distancia, el tiempo y el recorrido.</div>",
+        unsafe_allow_html=True,
+    )
 
 map_col, chat_col = st.columns([1.55, 1], gap="large")
 with map_col:
@@ -85,6 +113,15 @@ with map_col:
             returned_objects=[],
             key="rutasmde_map",
         )
+        st.markdown("""
+<div class="legend">
+  <span><i style="background:#33443A"></i>Ruta</span>
+  <span><i style="background:#fff;border:2px solid #1C1B19"></i>Origen</span>
+  <span><i style="background:#1C1B19"></i>Destino</span>
+  <span><i style="background:#8A5A44"></i>Metro, tranvía y cables</span>
+  <span><i style="background:#4F6B7A"></i>EnCicla</span>
+</div>
+""", unsafe_allow_html=True)
     except Exception as map_error:
         st.warning("No fue posible cargar el mapa. El chat sigue disponible.")
         with st.expander("Detalle técnico"):
@@ -96,7 +133,7 @@ with chat_col:
     history_box = st.container(height=405, border=True)
     with history_box:
         if not st.session_state.messages:
-            st.info("Hola. Puedo ayudarte con rutas viales, Metro, EnCicla, horarios y otros temas de movilidad.")
+            st.markdown("<p class='chat-empty'>Pregunta por una ruta, por el Metro, EnCicla, tarifas, horarios o pico y placa.</p>", unsafe_allow_html=True)
         for message in st.session_state.messages:
             with st.chat_message(message["role"]):
                 st.markdown(message["content"])
@@ -104,8 +141,8 @@ with chat_col:
                     st.caption("Fuentes: " + " · ".join(message["sources"]))
 
     with st.form("mobility_chat", clear_on_submit=True):
-        prompt = st.text_input("Tu pregunta", placeholder="Escribe tu pregunta de movilidad…", label_visibility="collapsed")
-        submitted = st.form_submit_button("Enviar mensaje", type="primary", use_container_width=True)
+        prompt = st.text_input("Tu pregunta", placeholder="¿Cómo llego de EAFIT al Parque Berrío?")
+        submitted = st.form_submit_button("Enviar", type="primary", use_container_width=True)
 
     if submitted and prompt.strip():
         st.session_state.loading = True
