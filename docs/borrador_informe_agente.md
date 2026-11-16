@@ -46,9 +46,9 @@ Además, el equipo revisa manualmente cada respuesta (campo `revision_manual`), 
 |---|---|---|---|---|
 | 1 (versión inicial) | 13/15 | 10/13 | no medida | 17,7 s |
 | 2 (prompt y corpus corregidos) | 15/15 | 12/13 | 11/11 (calculada después sobre la misma corrida) | 10,5 s |
-| Definitiva (A* real) | pendiente | pendiente | pendiente | pendiente |
+| Definitiva (A* real) | 15/15 | 13/13 | 11/11 | 18,2 s |
 
-Las corridas 1 y 2 usaron una ruta simulada, así que no evalúan la calidad del A*.
+Las corridas 1 y 2 usaron una ruta simulada, así que no evalúan la calidad del A*. La corrida definitiva usa el A* real; su latencia sube por las esperas del límite de tasa de Groq en las preguntas de ruta. Revisión manual de la corrida definitiva: 11 respuestas correctas, 2 con imprecisiones menores y 2 con errores de contenido.
 
 **Lo que encontró la revisión manual.** El revisor automático marcaba como correctas respuestas con errores:
 

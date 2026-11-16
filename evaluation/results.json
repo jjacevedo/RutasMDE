@@ -6,7 +6,8 @@
     "herramientas_ok": "15/15",
     "datos_ok": "13/13",
     "fuente_ok": "11/11",
-    "latencia_promedio_s": 18.15
+    "latencia_promedio_s": 18.15,
+    "revision_manual": "11 correctas, 2 con imprecisiones menores (1 y 13), 2 con errores de contenido (2 y 11)"
   },
   "resultados": [
     {
@@ -48,7 +49,7 @@
       "datos_ok": true,
       "fuente_ok": true,
       "latencia_s": 9.79,
-      "revision_manual": ""
+      "revision_manual": "Correcta con imprecisiones menores. Estaciones y dirección bien (Aguacatala a Universidad, Línea A, norte). Dice 15 min a pie y el corpus dice 15 a 20; agrega 'camina unos minutos', que no está en el corpus. Una de las 4 fuentes es relleno."
     },
     {
       "id": 2,
@@ -78,7 +79,7 @@
       "datos_ok": null,
       "fuente_ok": null,
       "latencia_s": 33.14,
-      "revision_manual": ""
+      "revision_manual": "Ruta en carro correcta (A* real). Error en lo que agregó sin que se pidiera: dice que la estación más cercana a Laureles es Universidad (Línea A); según el corpus es Estadio (Línea B). También habla del 'terminal de El Poblado', que no existe: la terminal sur de la Línea A es La Estrella. Además incumple la regla de responder solo lo que se pregunta."
     },
     {
       "id": 3,
@@ -109,7 +110,7 @@
       "datos_ok": null,
       "fuente_ok": null,
       "latencia_s": 82.67,
-      "revision_manual": ""
+      "revision_manual": "Correcta. Envigado a Niquía por Línea A, dirección norte. Ineficiente: llamó 5 veces a calcular_ruta y tardó 82,7 s."
     },
     {
       "id": 4,
@@ -141,7 +142,7 @@
       "datos_ok": true,
       "fuente_ok": true,
       "latencia_s": 21.25,
-      "revision_manual": ""
+      "revision_manual": "Correcta. Coincide con el corpus. La primera fuente reportada es relleno (buses); la segunda es la que responde."
     },
     {
       "id": 5,
@@ -173,7 +174,7 @@
       "datos_ok": true,
       "fuente_ok": true,
       "latencia_s": 16.13,
-      "revision_manual": ""
+      "revision_manual": "Correcta. Coincide con el corpus."
     },
     {
       "id": 6,
@@ -207,7 +208,7 @@
       "datos_ok": true,
       "fuente_ok": true,
       "latencia_s": 11.4,
-      "revision_manual": ""
+      "revision_manual": "Correcta. Coincide con el corpus. El texto trae un marcador sobrante del modelo y la primera fuente es relleno (Línea L)."
     },
     {
       "id": 7,
@@ -240,7 +241,7 @@
       "datos_ok": true,
       "fuente_ok": true,
       "latencia_s": 6.07,
-      "revision_manual": ""
+      "revision_manual": "Correcta. Coincide con el corpus."
     },
     {
       "id": 8,
@@ -272,7 +273,7 @@
       "datos_ok": true,
       "fuente_ok": true,
       "latencia_s": 14.2,
-      "revision_manual": ""
+      "revision_manual": "Correcta. Coincide con el corpus. Día y horario bien."
     },
     {
       "id": 9,
@@ -304,7 +305,7 @@
       "datos_ok": true,
       "fuente_ok": true,
       "latencia_s": 9.21,
-      "revision_manual": ""
+      "revision_manual": "Correcta. Coincide con el corpus."
     },
     {
       "id": 10,
@@ -336,7 +337,7 @@
       "datos_ok": true,
       "fuente_ok": true,
       "latencia_s": 5.33,
-      "revision_manual": ""
+      "revision_manual": "Correcta. Coincide con el corpus."
     },
     {
       "id": 11,
@@ -372,7 +373,7 @@
       "datos_ok": true,
       "fuente_ok": true,
       "latencia_s": 16.31,
-      "revision_manual": ""
+      "revision_manual": "Parcialmente incorrecta. La secuencia Línea A, Acevedo, Línea K, Santo Domingo Savio, Línea L es correcta, igual que los 15 minutos, la tarifa cercana a 12.500 y el horario. Errores: llama a Acevedo 'terminal de la Línea A' (las terminales son Niquía y La Estrella) y fija la dirección 'sur', que depende del origen."
     },
     {
       "id": 12,
@@ -405,7 +406,7 @@
       "datos_ok": true,
       "fuente_ok": true,
       "latencia_s": 10.51,
-      "revision_manual": ""
+      "revision_manual": "Correcta. Coincide con el corpus."
     },
     {
       "id": 13,
@@ -439,7 +440,7 @@
       "datos_ok": true,
       "fuente_ok": true,
       "latencia_s": 17.83,
-      "revision_manual": ""
+      "revision_manual": "Correcta en el dato pedido (San Javier, Línea B). Imprecisión: dice que el Metrocable J 'lleva directamente a la comuna'; el corpus solo dice que conecta en San Javier y que a las escaleras se llega en bus o caminando."
     },
     {
       "id": 14,
@@ -462,7 +463,7 @@
       "datos_ok": true,
       "fuente_ok": null,
       "latencia_s": 3.7,
-      "revision_manual": ""
+      "revision_manual": "Correcta. Rechaza la pregunta fuera de tema sin llamar herramientas."
     },
     {
       "id": 15,
@@ -502,7 +503,7 @@
       "datos_ok": true,
       "fuente_ok": null,
       "latencia_s": 14.76,
-      "revision_manual": ""
+      "revision_manual": "Correcta. Reconoce que el dato no está en el corpus y no inventa una tarifa."
     }
   ]
 }
