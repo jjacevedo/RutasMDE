@@ -54,6 +54,11 @@
     "lon": -75.5784855,
     "name": "Universidad EAFIT, El Poblado"
   },
+  "eafit, medellin": {
+    "lat": 6.2002022,
+    "lon": -75.5784855,
+    "name": "Universidad EAFIT, 7 sur - 50"
+  },
   "el poblado": {
     "lat": 6.2006197,
     "lon": -75.5636832,
@@ -78,6 +83,11 @@
     "lat": 6.23,
     "lon": -75.57556,
     "name": "Estación Industriales (Metro línea A)"
+  },
+  "estacion niquia, bello": {
+    "lat": 6.3393835,
+    "lon": -75.544749,
+    "name": "Mall Estación Niquía, Avenida 55"
   },
   "estacion san antonio": {
     "lat": 6.2471163,
@@ -119,6 +129,11 @@
     "lon": -75.5958328,
     "name": "Laureles (Comuna 11)"
   },
+  "niquia": {
+    "lat": 6.3406493,
+    "lon": -75.5504488,
+    "name": "Niquía, Bello"
+  },
   "parque berrio": {
     "lat": 6.2500151,
     "lon": -75.568136,
@@ -128,6 +143,26 @@
     "lat": 6.2500151,
     "lon": -75.568136,
     "name": "Parque Berrío, La Candelaria"
+  },
+  "parque de envigado": {
+    "lat": 6.170119,
+    "lon": -75.5874231,
+    "name": "Parque de Envigado, Envigado"
+  },
+  "parque de envigado, envigado": {
+    "lat": 6.170119,
+    "lon": -75.5874231,
+    "name": "Parque de Envigado, Envigado"
+  },
+  "parque de envigado, envigado, medellin": {
+    "lat": 6.2461287,
+    "lon": -75.5934651,
+    "name": "Estación EnCicla Primer Parque de Laureles, 73-95"
+  },
+  "parque de envigado, medellin": {
+    "lat": 6.2461287,
+    "lon": -75.5934651,
+    "name": "Estación EnCicla Primer Parque de Laureles, 73-95"
   },
   "parque explora": {
     "lat": 6.2706212,
@@ -163,6 +198,11 @@
     "lat": 6.2002022,
     "lon": -75.5784855,
     "name": "Universidad EAFIT, El Poblado"
+  },
+  "universidad eafit, medellin, antioquia, colombia": {
+    "lat": 6.2002022,
+    "lon": -75.5784855,
+    "name": "Universidad EAFIT, 7 sur - 50"
   },
   "universidad nacional": {
     "lat": 6.262958,
