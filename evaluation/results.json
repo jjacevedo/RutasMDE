@@ -1,0 +1,440 @@
+{
+  "modelo": "openai/gpt-oss-120b",
+  "fecha": "2026-11-10 00:43",
+  "resumen": {
+    "ruta_ok": "13/13",
+    "herramientas_ok": "15/15",
+    "datos_ok": "12/13",
+    "latencia_promedio_s": 10.5
+  },
+  "resultados": [
+    {
+      "id": 1,
+      "categoria": "ruta",
+      "pregunta": "¿Cómo llego de EAFIT al Parque Explora?",
+      "espera_ruta": true,
+      "herramientas": [
+        "calcular_ruta",
+        "consultar_movilidad"
+      ],
+      "datos_clave": [
+        [
+          "aguacatala",
+          "poblado"
+        ],
+        [
+          "universidad"
+        ]
+      ],
+      "respuesta": "**En carro**  \n- Ruta más rápida (según cálculo A*): 9.4 km, aproximadamente **24 min** (tiempo sin considerar tráfico).  \n\n**En transporte público (Metro)**  \n\n1. **Salida:** La Universidad EAFIT está en El Poblado, a unos 15‑20 min a pie de las estaciones **Aguacatala** o **Poblado** (línea A) – según la información de estaciones cercanas a la EAFIT.  \n2. **Metro:** Sube a la línea A en cualquiera de esas estaciones y viaja en dirección **norte** (hacia Niquía).  \n3. **Bajada:** Baja en la estación **Universidad** (línea A) – la estación más cercana al Parque Explora (según la lista de estaciones cercanas al Parque Explora).  \n4. **Caminata:** Desde la estación Universidad camina unos minutos hasta el Parque Explora.\n\nAsí puedes elegir entre ir en carro (≈ 24 min) o usar el Metro (solo un viaje sin transbordos y una corta caminata).",
+      "herramientas_usadas": [
+        "consultar_movilidad",
+        "consultar_movilidad",
+        "calcular_ruta"
+      ],
+      "fuentes": [
+        "Lugares de referencia de Medellín y su estación más cercana - Municipios del sur y del norte del Valle de Aburrá",
+        "Metro de Medellín, líneas A y B - Proyectos en desarrollo",
+        "Lugares de referencia de Medellín y su estación más cercana - Universidades",
+        "Metroplús y buses del Valle de Aburrá - Línea 1 de Metroplús"
+      ],
+      "ruta_km": 9.4,
+      "ruta_ok": true,
+      "herramientas_ok": true,
+      "datos_ok": true,
+      "latencia_s": 5.37,
+      "revision_manual": ""
+    },
+    {
+      "id": 2,
+      "categoria": "ruta",
+      "pregunta": "¿Cuál es la ruta más rápida en carro de Laureles a El Poblado?",
+      "espera_ruta": true,
+      "herramientas": [
+        "calcular_ruta"
+      ],
+      "datos_clave": [],
+      "respuesta": "La ruta más rápida en carro de Laureles a El Poblado es de **9.4 km** y tarda aproximadamente **24 minutos** (tiempo calculado con el algoritmo A* y sin considerar el tráfico).",
+      "herramientas_usadas": [
+        "calcular_ruta"
+      ],
+      "fuentes": [],
+      "ruta_km": 9.4,
+      "ruta_ok": true,
+      "herramientas_ok": true,
+      "datos_ok": null,
+      "latencia_s": 1.71,
+      "revision_manual": ""
+    },
+    {
+      "id": 3,
+      "categoria": "ruta",
+      "pregunta": "Necesito ir del Parque de Envigado a la estación Niquía",
+      "espera_ruta": true,
+      "herramientas": [
+        "calcular_ruta"
+      ],
+      "datos_clave": [],
+      "respuesta": "**En carro**  \n- Distancia: ≈ 9.4 km  \n- Tiempo estimado: ≈ 24 min *(cálculo A* sin considerar tráfico)*  \n\n**En transporte público (Metro)**  \nSegún la información de estaciones cercanas al Parque de Envigado (consulta de movilidad), la estación más próxima es **Envigado** (Línea A). La estación **Niquía** (Bello) es la terminal norte de la misma línea.  \n\n**Itinerario en Metro**  \n1. **Subir** en la estación **Envigado**.  \n2. Tomar el tren en dirección **norte** (hacia la estación terminal Niquía).  \n3. **Bajar** en la estación **Niquía**.  \n\nNo se requieren transbordos; la Línea A recorre todo el valle de sur a norte.  \n\nSi prefieres la ruta exacta en carro, ya tienes la distancia y el tiempo estimado. ¡Buen viaje!",
+      "herramientas_usadas": [
+        "consultar_movilidad",
+        "calcular_ruta"
+      ],
+      "fuentes": [
+        "Lugares de referencia de Medellín y su estación más cercana - Municipios del sur y del norte del Valle de Aburrá",
+        "Metroplús y buses del Valle de Aburrá - Línea 1 de Metroplús"
+      ],
+      "ruta_km": 9.4,
+      "ruta_ok": true,
+      "herramientas_ok": true,
+      "datos_ok": null,
+      "latencia_s": 7.95,
+      "revision_manual": ""
+    },
+    {
+      "id": 4,
+      "categoria": "tarifas",
+      "pregunta": "¿Cuánto cuesta el pasaje del Metro para estudiantes?",
+      "espera_ruta": false,
+      "herramientas": [
+        "consultar_movilidad"
+      ],
+      "datos_clave": [
+        [
+          "1.600"
+        ]
+      ],
+      "respuesta": "El pasaje del Metro para estudiantes (perfil estudiantil de la tarjeta Cívica) cuesta **1 600 pesos**.  \n\n*Fuente: tarifas 2026 del sistema Metro de Medellín (según la información de Telemedellín y medios locales).*",
+      "herramientas_usadas": [
+        "consultar_movilidad"
+      ],
+      "fuentes": [
+        "Tarifas 2026 del sistema Metro y tarjeta Cívica - Valor del pasaje del Metro en 2026 por perfil",
+        "Tarifas 2026 del sistema Metro y tarjeta Cívica - Tarjeta Cívica"
+      ],
+      "ruta_km": null,
+      "ruta_ok": true,
+      "herramientas_ok": true,
+      "datos_ok": true,
+      "latencia_s": 14.62,
+      "revision_manual": ""
+    },
+    {
+      "id": 5,
+      "categoria": "tarifas",
+      "pregunta": "¿Cuánto vale el pasaje del Metro si no tengo la Cívica personalizada?",
+      "espera_ruta": false,
+      "herramientas": [
+        "consultar_movilidad"
+      ],
+      "datos_clave": [
+        [
+          "4.400"
+        ]
+      ],
+      "respuesta": "Según las tarifas 2026 del Metro, el pasaje para un usuario al portador (es decir, sin tarjeta Cívica personalizada) cuesta **4 400 pesos**.",
+      "herramientas_usadas": [
+        "consultar_movilidad"
+      ],
+      "fuentes": [
+        "Tarifas 2026 del sistema Metro y tarjeta Cívica - Valor del pasaje del Metro en 2026 por perfil",
+        "Tarifas 2026 del sistema Metro y tarjeta Cívica - Tarjeta Cívica"
+      ],
+      "ruta_km": null,
+      "ruta_ok": true,
+      "herramientas_ok": true,
+      "datos_ok": true,
+      "latencia_s": 20.75,
+      "revision_manual": ""
+    },
+    {
+      "id": 6,
+      "categoria": "horarios",
+      "pregunta": "¿A qué hora abre el Metro los domingos?",
+      "espera_ruta": false,
+      "herramientas": [
+        "consultar_movilidad"
+      ],
+      "datos_clave": [
+        [
+          "5:00",
+          "5 a.m",
+          "5 am"
+        ]
+      ],
+      "respuesta": "El Metro de Medellín abre los domingos a las **5:00 a.m.** (las líneas A, B, T‑A, O, 1 y 2 operan de 5:00 a.m. a 10:00 p.m.).  \n\n*Fuente: horarios de operación del Metro (consulta de movilidad).*",
+      "herramientas_usadas": [
+        "consultar_movilidad"
+      ],
+      "fuentes": [
+        "Horarios de operación del sistema Metro - Línea L (Arví)",
+        "Horarios de operación del sistema Metro - Domingos y festivos"
+      ],
+      "ruta_km": null,
+      "ruta_ok": true,
+      "herramientas_ok": true,
+      "datos_ok": true,
+      "latencia_s": 7.24,
+      "revision_manual": ""
+    },
+    {
+      "id": 7,
+      "categoria": "horarios",
+      "pregunta": "¿A qué hora empieza a funcionar el Metrocable línea K los domingos?",
+      "espera_ruta": false,
+      "herramientas": [
+        "consultar_movilidad"
+      ],
+      "datos_clave": [
+        [
+          "8:30"
+        ]
+      ],
+      "respuesta": "Según los horarios oficiales del Metro de Medellín, el Metrocable línea K comienza a operar los domingos a las **8:30 a.m.** (y funciona hasta las 10:00 p.m.). (Información obtenida de la página de horarios del Metro).",
+      "herramientas_usadas": [
+        "consultar_movilidad"
+      ],
+      "fuentes": [
+        "Horarios de operación del sistema Metro - Domingos y festivos",
+        "Tranvía de Ayacucho y líneas de Metrocable - Línea L (Arví)"
+      ],
+      "ruta_km": null,
+      "ruta_ok": true,
+      "herramientas_ok": true,
+      "datos_ok": true,
+      "latencia_s": 13.27,
+      "revision_manual": ""
+    },
+    {
+      "id": 8,
+      "categoria": "pico_y_placa",
+      "pregunta": "Mi carro tiene placa terminada en 4, ¿qué día tengo pico y placa?",
+      "espera_ruta": false,
+      "herramientas": [
+        "consultar_movilidad"
+      ],
+      "datos_clave": [
+        [
+          "martes"
+        ]
+      ],
+      "respuesta": "Según la rotación de pico y placa para el segundo semestre de 2026 en Medellín, los vehículos con placa terminada en **4** tienen restricción los **martes** (junto con los terminados en 1).",
+      "herramientas_usadas": [
+        "consultar_movilidad"
+      ],
+      "fuentes": [
+        "Pico y placa en Medellín, segundo semestre de 2026 - Dígitos por día",
+        "Pico y placa en Medellín, segundo semestre de 2026 - Vigencia"
+      ],
+      "ruta_km": null,
+      "ruta_ok": true,
+      "herramientas_ok": true,
+      "datos_ok": true,
+      "latencia_s": 18.91,
+      "revision_manual": ""
+    },
+    {
+      "id": 9,
+      "categoria": "pico_y_placa",
+      "pregunta": "Para el pico y placa de motos, ¿qué dígito de la placa cuenta?",
+      "espera_ruta": false,
+      "herramientas": [
+        "consultar_movilidad"
+      ],
+      "datos_clave": [
+        [
+          "primer"
+        ]
+      ],
+      "respuesta": "En el pico y placa de Medellín para motos se toma **el primer dígito de la placa**. (Según la información de pico y placa 2026).",
+      "herramientas_usadas": [
+        "consultar_movilidad"
+      ],
+      "fuentes": [
+        "Pico y placa en Medellín, segundo semestre de 2026 - Dígitos por día",
+        "Pico y placa en Medellín, segundo semestre de 2026 - Taxis"
+      ],
+      "ruta_km": null,
+      "ruta_ok": true,
+      "herramientas_ok": true,
+      "datos_ok": true,
+      "latencia_s": 5.08,
+      "revision_manual": ""
+    },
+    {
+      "id": 10,
+      "categoria": "encicla",
+      "pregunta": "¿Cuánto tiempo máximo puedo usar una bicicleta eléctrica de EnCicla?",
+      "espera_ruta": false,
+      "herramientas": [
+        "consultar_movilidad"
+      ],
+      "datos_clave": [
+        [
+          "30"
+        ]
+      ],
+      "respuesta": "Según la información de EnCicla sobre bicicletas eléctricas, el préstamo máximo es de **30 minutos**. Después de ese tiempo se considera excedido y pueden aplicarse sanciones.",
+      "herramientas_usadas": [
+        "consultar_movilidad"
+      ],
+      "fuentes": [
+        "EnCicla, sistema de bicicletas públicas del Valle de Aburrá - Tiempo de préstamo y sanciones",
+        "EnCicla, sistema de bicicletas públicas del Valle de Aburrá - Bicicletas eléctricas"
+      ],
+      "ruta_km": null,
+      "ruta_ok": true,
+      "herramientas_ok": true,
+      "datos_ok": true,
+      "latencia_s": 13.83,
+      "revision_manual": ""
+    },
+    {
+      "id": 11,
+      "categoria": "metrocable",
+      "pregunta": "¿Cómo llego al Parque Arví en transporte público?",
+      "espera_ruta": null,
+      "herramientas": [
+        "consultar_movilidad"
+      ],
+      "datos_clave": [
+        [
+          "acevedo"
+        ],
+        [
+          "santo domingo"
+        ]
+      ],
+      "respuesta": "**Cómo llegar al Parque Arví en transporte público**\n\n1. **Metro (Línea A)**\n   - **Subir** en cualquier estación de la Línea A (por ejemplo, San Antonio, Estación Central, etc.).\n   - **Dirección**: hacia el sur del valle, hasta la estación **San Antonio** (terminal sur de la Línea A).\n\n2. **Metrocable Línea K**\n   - En la estación **San Antonio** transborda a la **Línea K** del Metrocable.\n   - **Subir** en la estación **San Antonio** (dirección “hacia Santo Domingo Savio”).\n   - **Bajar** en la estación **Santo Domingo Savio** (terminal de la Línea K).\n\n3. **Metrocable Línea L (turística)**\n   - En **Santo Domingo Savio** cambia a la **Línea L** del Metrocable, que es la que lleva directamente al Parque Arví.\n   - **Subir** en la estación **Santo Domingo Savio** (dirección “hacia Parque Arví”).\n   - **Bajar** en la estación **Parque Arví** (única parada de la Línea L).\n\n---\n\n### Detalles de la Línea L (Parque Arví)\n\n- **Tipo**: Metrocable turístico, sin estaciones intermedias.  \n- **Tarifa**: alrededor de **12 500 pesos** por trayecto (tarifa distinta a la del Metro). *(según las tarifas 2026 del Metrocable)*  \n- **Horario**:  \n  - Martes a sábado: **09:00 – 18:00**  \n  - Domingos y festivos: **08:30 – 18:00**  \n  - No opera el primer día hábil de la semana. *(según horarios del Metrocable)*  \n\n---\n\n### Resumen rápido\n\n- **Metro Línea A → San Antonio**  \n- **Metrocable K → Santo Domingo Savio**  \n- **Metrocable L → Parque Arví**  \n\nCon este recorrido llegas al Parque Arví usando solo el Metro y los Metrocables, sin necesidad de vehículo privado. Si deseas conocer la distancia o el tiempo estimado en carro, avísame y calculo la ruta con la herramienta correspondiente.",
+      "herramientas_usadas": [
+        "consultar_movilidad"
+      ],
+      "fuentes": [
+        "Tranvía de Ayacucho y líneas de Metrocable - Línea L (Arví)",
+        "Lugares de referencia de Medellín y su estación más cercana - Municipios del sur y del norte del Valle de Aburrá"
+      ],
+      "ruta_km": null,
+      "ruta_ok": null,
+      "herramientas_ok": true,
+      "datos_ok": false,
+      "latencia_s": 13.24,
+      "revision_manual": ""
+    },
+    {
+      "id": 12,
+      "categoria": "normas",
+      "pregunta": "¿A qué distancia mínima debe pasar un carro al adelantar a un ciclista?",
+      "espera_ruta": false,
+      "herramientas": [
+        "consultar_movilidad"
+      ],
+      "datos_clave": [
+        [
+          "1,5",
+          "1.5"
+        ]
+      ],
+      "respuesta": "Según la normativa de tránsito colombiana (Ley 769 de 2002, artículo 60), al adelantar a un ciclista o a un usuario de vehículo eléctrico liviano el conductor debe dejar **al menos 1,50 metros** de distancia.",
+      "herramientas_usadas": [
+        "consultar_movilidad"
+      ],
+      "fuentes": [
+        "Normas de tránsito para peatones y ciclistas en Colombia (Ley 769 de 2002) - Adelantamiento a ciclistas (artículo 60)",
+        "Normas de tránsito para peatones y ciclistas en Colombia (Ley 769 de 2002) - Normas para ciclistas (artículos 68, 94 y 95)"
+      ],
+      "ruta_km": null,
+      "ruta_ok": true,
+      "herramientas_ok": true,
+      "datos_ok": true,
+      "latencia_s": 15.6,
+      "revision_manual": ""
+    },
+    {
+      "id": 13,
+      "categoria": "comunas",
+      "pregunta": "¿Qué estación del Metro sirve a la Comuna 13?",
+      "espera_ruta": false,
+      "herramientas": [
+        "consultar_movilidad"
+      ],
+      "datos_clave": [
+        [
+          "san javier"
+        ]
+      ],
+      "respuesta": "La estación del Metro que sirve a la Comuna 13 es **San Javier** (línea B). Desde allí se conecta el Metrocable línea J, que lleva directamente a la Comuna 13. (Según la información de la red de Metro de Medellín).",
+      "herramientas_usadas": [
+        "consultar_movilidad"
+      ],
+      "fuentes": [
+        "Metroplús y buses del Valle de Aburrá - Línea 2 de Metroplús",
+        "Metro de Medellín, líneas A y B - Conexiones de la Línea B"
+      ],
+      "ruta_km": null,
+      "ruta_ok": true,
+      "herramientas_ok": true,
+      "datos_ok": true,
+      "latencia_s": 6.02,
+      "revision_manual": ""
+    },
+    {
+      "id": 14,
+      "categoria": "fuera_de_alcance",
+      "pregunta": "¿Quién ganó el último Mundial de fútbol?",
+      "espera_ruta": false,
+      "herramientas": [],
+      "datos_clave": [
+        [
+          "movilidad"
+        ]
+      ],
+      "respuesta": "Lo siento, solo puedo ayudar con preguntas relacionadas con la movilidad en Medellín y el Valle de Aburrá.",
+      "herramientas_usadas": [],
+      "fuentes": [],
+      "ruta_km": null,
+      "ruta_ok": true,
+      "herramientas_ok": true,
+      "datos_ok": true,
+      "latencia_s": 3.54,
+      "revision_manual": ""
+    },
+    {
+      "id": 15,
+      "categoria": "sin_dato_en_corpus",
+      "pregunta": "¿Cuánto cuesta un taxi del aeropuerto José María Córdova a El Poblado?",
+      "espera_ruta": null,
+      "herramientas": [
+        "consultar_movilidad"
+      ],
+      "datos_clave": [
+        [
+          "no encontr",
+          "no tengo",
+          "no aparece",
+          "no dispongo",
+          "no cuento",
+          "no incluye",
+          "no esta",
+          "no se indica",
+          "no hay informacion",
+          "no se encuentra",
+          "no figura"
+        ]
+      ],
+      "respuesta": "Lo siento, pero en la información disponible no se indica el valor de la tarifa de taxi entre el aeropuerto José María Córdova y el sector El Poblado. No dispongo de datos oficiales sobre ese costo. Te recomiendo consultar directamente con una compañía de taxis o usar una aplicación de movilidad (por ejemplo, Beat, DiDi o Uber) para obtener la tarifa estimada.",
+      "herramientas_usadas": [
+        "consultar_movilidad"
+      ],
+      "fuentes": [
+        "Comunas de Medellín y municipios del Valle de Aburrá - Comunas de la zona suroriental y suroccidental",
+        "Principales corredores viales de Medellín - Salidas de la ciudad"
+      ],
+      "ruta_km": null,
+      "ruta_ok": null,
+      "herramientas_ok": true,
+      "datos_ok": true,
+      "latencia_s": 10.32,
+      "revision_manual": ""
+    }
+  ]
+}
