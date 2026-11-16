@@ -11,9 +11,11 @@ Precargar la caché con los lugares de la evaluación:
 """
 
 import json
+import ssl
 import unicodedata
 from pathlib import Path
 
+import certifi
 import osmnx as ox
 from geopy.extra.rate_limiter import RateLimiter
 from geopy.geocoders import Nominatim
@@ -24,7 +26,9 @@ VIEWBOX = [(6.10, -75.72), (6.40, -75.45)]
 
 MAX_SNAP_M = 1500
 
-_geolocator = Nominatim(user_agent="rutasmde-eafit-si3003", timeout=10)
+# El Python de python.org en macOS no trae certificados raíz; se usan los de certifi.
+_geolocator = Nominatim(user_agent="rutasmde-eafit-si3003", timeout=10,
+                        ssl_context=ssl.create_default_context(cafile=certifi.where()))
 _geocode_limited = RateLimiter(_geolocator.geocode, min_delay_seconds=1.1, max_retries=2)
 _cache: dict | None = None
 
