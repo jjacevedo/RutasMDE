@@ -1,0 +1,11 @@
+Grafo: 25457 nodos, 58821 aristas
+
+Peso = length
+  Rutas óptimas (igual a networkx): 15/15
+  Nodos expandidos promedio  A*:     4043 | Dijkstra:    12252 | A* expande 33% de lo que expande Dijkstra
+  Tiempo promedio (ms)       A*:     23.8 | Dijkstra:     49.0
+
+Peso = travel_time
+  Rutas óptimas (igual a networkx): 15/15
+  Nodos expandidos promedio  A*:     5658 | Dijkstra:     9698 | A* expande 58% de lo que expande Dijkstra
+  Tiempo promedio (ms)       A*:     31.7 | Dijkstra:     38.7
