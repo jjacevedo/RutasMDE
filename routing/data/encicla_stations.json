@@ -1,0 +1,432 @@
+[
+  {
+    "name": "Estación EnCicla Bahía Vehicular",
+    "lat": 6.278459,
+    "lon": -75.580567
+  },
+  {
+    "name": "Estación EnCicla Bulerías",
+    "lat": 6.238762,
+    "lon": -75.590242
+  },
+  {
+    "name": "Estación EnCicla C4TA",
+    "lat": 6.254056,
+    "lon": -75.613835
+  },
+  {
+    "name": "Estación EnCicla Calle 19A Villa Carlota",
+    "lat": 6.222122,
+    "lon": -75.571012
+  },
+  {
+    "name": "Estación EnCicla Calle 51 Los Colores",
+    "lat": 6.26344,
+    "lon": -75.595106
+  },
+  {
+    "name": "Estación EnCicla Campo Amor",
+    "lat": 6.213084,
+    "lon": -75.587872
+  },
+  {
+    "name": "Estación EnCicla Campus Nacional",
+    "lat": 6.260409,
+    "lon": -75.577265
+  },
+  {
+    "name": "Estación EnCicla Carlos E. Restrepo",
+    "lat": 6.255609,
+    "lon": -75.579178
+  },
+  {
+    "name": "Estación EnCicla Circular Primera",
+    "lat": 6.241813,
+    "lon": -75.59196
+  },
+  {
+    "name": "Estación EnCicla Cisneros",
+    "lat": 6.248732,
+    "lon": -75.574691
+  },
+  {
+    "name": "Estación EnCicla Ciudad del Río",
+    "lat": 6.222534,
+    "lon": -75.572988
+  },
+  {
+    "name": "Estación EnCicla Ciudadela Universitaria Robledo",
+    "lat": 6.273296,
+    "lon": -75.588668
+  },
+  {
+    "name": "Estación EnCicla Colombia",
+    "lat": 6.25652,
+    "lon": -75.580977
+  },
+  {
+    "name": "Estación EnCicla Coltejer",
+    "lat": 6.249381,
+    "lon": -75.565527
+  },
+  {
+    "name": "Estación EnCicla Cuatro Vientos",
+    "lat": 6.268012,
+    "lon": -75.591963
+  },
+  {
+    "name": "Estación EnCicla Dian Alpujarra",
+    "lat": 6.243342,
+    "lon": -75.572227
+  },
+  {
+    "name": "Estación EnCicla Distrito Creativo",
+    "lat": 6.234689,
+    "lon": -75.571916
+  },
+  {
+    "name": "Estación EnCicla Estadio",
+    "lat": 6.253448,
+    "lon": -75.588536
+  },
+  {
+    "name": "Estación EnCicla Floresta",
+    "lat": 6.258384,
+    "lon": -75.597301
+  },
+  {
+    "name": "Estación EnCicla Florida Nueva",
+    "lat": 6.252608,
+    "lon": -75.590276
+  },
+  {
+    "name": "Estación EnCicla Hospital Infantil Concejo de Medellín",
+    "lat": 6.268301,
+    "lon": -75.558861
+  },
+  {
+    "name": "Estación EnCicla Iglesia San Pedro y San Pablo",
+    "lat": 6.260476,
+    "lon": -75.59561
+  },
+  {
+    "name": "Estación EnCicla Industriales Metro",
+    "lat": 6.230392,
+    "lon": -75.574341
+  },
+  {
+    "name": "Estación EnCicla Industriales Metroplús",
+    "lat": 6.231182,
+    "lon": -75.576874
+  },
+  {
+    "name": "Estación EnCicla Juan Pablo II",
+    "lat": 6.222137,
+    "lon": -75.591962
+  },
+  {
+    "name": "Estación EnCicla La 33",
+    "lat": 6.239245,
+    "lon": -75.58303
+  },
+  {
+    "name": "Estación EnCicla La 65",
+    "lat": 6.24886,
+    "lon": -75.583422
+  },
+  {
+    "name": "Estación EnCicla Las Piedritas",
+    "lat": 6.26508,
+    "lon": -75.594268
+  },
+  {
+    "name": "Estación EnCicla Los Colores",
+    "lat": 6.260079,
+    "lon": -75.585146
+  },
+  {
+    "name": "Estación EnCicla MAMM",
+    "lat": 6.223926,
+    "lon": -75.575016
+  },
+  {
+    "name": "Estación EnCicla María Luisa Calle",
+    "lat": 6.215786,
+    "lon": -75.593081
+  },
+  {
+    "name": "Estación EnCicla María Mulata",
+    "lat": 6.250608,
+    "lon": -75.594714
+  },
+  {
+    "name": "Estación EnCicla Moravia",
+    "lat": 6.276594,
+    "lon": -75.564797
+  },
+  {
+    "name": "Estación EnCicla Museo de Antioquia",
+    "lat": 6.251788,
+    "lon": -75.568804
+  },
+  {
+    "name": "Estación EnCicla Málaga",
+    "lat": 6.246616,
+    "lon": -75.569903
+  },
+  {
+    "name": "Estación EnCicla Nutibara",
+    "lat": 6.231723,
+    "lon": -75.582914
+  },
+  {
+    "name": "Estación EnCicla Orquídeas",
+    "lat": 6.26275,
+    "lon": -75.588726
+  },
+  {
+    "name": "Estación EnCicla Palacio de la Cultura",
+    "lat": 6.250751,
+    "lon": -75.568277
+  },
+  {
+    "name": "Estación EnCicla Palacé",
+    "lat": 6.236379,
+    "lon": -75.573612
+  },
+  {
+    "name": "Estación EnCicla Parque Berrio",
+    "lat": 6.25014,
+    "lon": -75.56844
+  },
+  {
+    "name": "Estación EnCicla Parque Los Mangos",
+    "lat": 6.245423,
+    "lon": -75.583959
+  },
+  {
+    "name": "Estación EnCicla Parque Malibú",
+    "lat": 6.237805,
+    "lon": -75.589253
+  },
+  {
+    "name": "Estación EnCicla Parque San Joaquín",
+    "lat": 6.245513,
+    "lon": -75.586753
+  },
+  {
+    "name": "Estación EnCicla Parque de Itagüí",
+    "lat": 6.172916,
+    "lon": -75.609301
+  },
+  {
+    "name": "Estación EnCicla Parque de Las Luces I",
+    "lat": 6.246142,
+    "lon": -75.571702
+  },
+  {
+    "name": "Estación EnCicla Parque de Las Luces II",
+    "lat": 6.245692,
+    "lon": -75.571809
+  },
+  {
+    "name": "Estación EnCicla Parque la Bailarina",
+    "lat": 6.209392,
+    "lon": -75.574758
+  },
+  {
+    "name": "Estación EnCicla Parques del Río",
+    "lat": 6.244982,
+    "lon": -75.580034
+  },
+  {
+    "name": "Estación EnCicla Pedro Nel Gómez",
+    "lat": 6.246968,
+    "lon": -75.596519
+  },
+  {
+    "name": "Estación EnCicla Picacha La 76",
+    "lat": 6.235205,
+    "lon": -75.596468
+  },
+  {
+    "name": "Estación EnCicla Pies Descalzos I",
+    "lat": 6.24541,
+    "lon": -75.576899
+  },
+  {
+    "name": "Estación EnCicla Pies Descalzos II",
+    "lat": 6.245289,
+    "lon": -75.576737
+  },
+  {
+    "name": "Estación EnCicla Plaza Mayor",
+    "lat": 6.242344,
+    "lon": -75.57589
+  },
+  {
+    "name": "Estación EnCicla Plaza de la Libertad",
+    "lat": 6.243519,
+    "lon": -75.574667
+  },
+  {
+    "name": "Estación EnCicla Politécnico",
+    "lat": 6.209848,
+    "lon": -75.576429
+  },
+  {
+    "name": "Estación EnCicla Primer Parque de Laureles",
+    "lat": 6.246129,
+    "lon": -75.593465
+  },
+  {
+    "name": "Estación EnCicla Robledo",
+    "lat": 6.273085,
+    "lon": -75.592149
+  },
+  {
+    "name": "Estación EnCicla Rosales",
+    "lat": 6.231418,
+    "lon": -75.591489
+  },
+  {
+    "name": "Estación EnCicla Ruta N",
+    "lat": 6.26516,
+    "lon": -75.566329
+  },
+  {
+    "name": "Estación EnCicla Río Aburrá",
+    "lat": 6.227949,
+    "lon": -75.574663
+  },
+  {
+    "name": "Estación EnCicla SIU UdeA",
+    "lat": 6.260481,
+    "lon": -75.567185
+  },
+  {
+    "name": "Estación EnCicla San Antonio",
+    "lat": 6.247561,
+    "lon": -75.569554
+  },
+  {
+    "name": "Estación EnCicla San Joaquín",
+    "lat": 6.243539,
+    "lon": -75.585853
+  },
+  {
+    "name": "Estación EnCicla San Juan",
+    "lat": 6.249068,
+    "lon": -75.588646
+  },
+  {
+    "name": "Estación EnCicla San Pedro y San Pablo",
+    "lat": 6.258317,
+    "lon": -75.594253
+  },
+  {
+    "name": "Estación EnCicla Santa Teresita",
+    "lat": 6.241844,
+    "lon": -75.596781
+  },
+  {
+    "name": "Estación EnCicla Segundo Parque de Laureles",
+    "lat": 6.245141,
+    "lon": -75.597031
+  },
+  {
+    "name": "Estación EnCicla Suramericana",
+    "lat": 6.253019,
+    "lon": -75.583306
+  },
+  {
+    "name": "Estación EnCicla Teatro Pablo Tobón Uribe",
+    "lat": 6.247471,
+    "lon": -75.56039
+  },
+  {
+    "name": "Estación EnCicla Telemedellín",
+    "lat": 6.219947,
+    "lon": -75.571598
+  },
+  {
+    "name": "Estación EnCicla UPB",
+    "lat": 6.245013,
+    "lon": -75.589293
+  },
+  {
+    "name": "Estación EnCicla Unicentro",
+    "lat": 6.239998,
+    "lon": -75.586732
+  },
+  {
+    "name": "Estación EnCicla Universidad",
+    "lat": 6.269269,
+    "lon": -75.565301
+  },
+  {
+    "name": "Estación EnCicla Vegas calle 4 Sur",
+    "lat": 6.203287,
+    "lon": -75.577401
+  },
+  {
+    "name": "Estación EnCicla Villa Carlota",
+    "lat": 6.220637,
+    "lon": -75.575306
+  },
+  {
+    "name": "Estación EnCicla sin nombre 1",
+    "lat": 6.168711,
+    "lon": -75.590967
+  },
+  {
+    "name": "Estación EnCicla sin nombre 2",
+    "lat": 6.169115,
+    "lon": -75.588447
+  },
+  {
+    "name": "Estación EnCicla sin nombre 3",
+    "lat": 6.170292,
+    "lon": -75.58689
+  },
+  {
+    "name": "Estación EnCicla sin nombre 4",
+    "lat": 6.171793,
+    "lon": -75.591239
+  },
+  {
+    "name": "Estación EnCicla sin nombre 5",
+    "lat": 6.173911,
+    "lon": -75.596666
+  },
+  {
+    "name": "Estación EnCicla sin nombre 6",
+    "lat": 6.174314,
+    "lon": -75.596004
+  },
+  {
+    "name": "Estación EnCicla sin nombre 7",
+    "lat": 6.209242,
+    "lon": -75.566678
+  },
+  {
+    "name": "Estación EnCicla Área Metropolitana",
+    "lat": 6.242548,
+    "lon": -75.573902
+  },
+  {
+    "name": "Estación Encicla Batallón",
+    "lat": 6.262188,
+    "lon": -75.595055
+  },
+  {
+    "name": "Parque del Artista",
+    "lat": 6.179002,
+    "lon": -75.602137
+  },
+  {
+    "name": "Pista de Bicicross Envigado",
+    "lat": 6.164169,
+    "lon": -75.600952
+  }
+]
