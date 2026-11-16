@@ -1,0 +1,284 @@
+[
+  {
+    "name": "Acevedo",
+    "lat": 6.29997,
+    "lon": -75.558535,
+    "tipo": "metro"
+  },
+  {
+    "name": "Aguacatala",
+    "lat": 6.193913,
+    "lon": -75.581812,
+    "tipo": "metro"
+  },
+  {
+    "name": "Alejandro Echavarría",
+    "lat": 6.235516,
+    "lon": -75.541714,
+    "tipo": "tranvia"
+  },
+  {
+    "name": "Alpujarra",
+    "lat": 6.242932,
+    "lon": -75.571414,
+    "tipo": "metro"
+  },
+  {
+    "name": "Andalucía",
+    "lat": 6.296329,
+    "lon": -75.551881,
+    "tipo": "cable"
+  },
+  {
+    "name": "Arví",
+    "lat": 6.281261,
+    "lon": -75.503062,
+    "tipo": "cable"
+  },
+  {
+    "name": "Ayurá",
+    "lat": 6.186145,
+    "lon": -75.58607,
+    "tipo": "metro"
+  },
+  {
+    "name": "Bello",
+    "lat": 6.329959,
+    "lon": -75.553725,
+    "tipo": "metro"
+  },
+  {
+    "name": "Bicentenario",
+    "lat": 6.24398,
+    "lon": -75.558748,
+    "tipo": "tranvia"
+  },
+  {
+    "name": "Buenos Aires",
+    "lat": 6.241361,
+    "lon": -75.553909,
+    "tipo": "tranvia"
+  },
+  {
+    "name": "Caribe",
+    "lat": 6.278398,
+    "lon": -75.569388,
+    "tipo": "metro"
+  },
+  {
+    "name": "Cisneros",
+    "lat": 6.249038,
+    "lon": -75.57512,
+    "tipo": "metro"
+  },
+  {
+    "name": "Doce de Octubre",
+    "lat": 6.304227,
+    "lon": -75.576042,
+    "tipo": "cable"
+  },
+  {
+    "name": "El Pinal",
+    "lat": 6.245289,
+    "lon": -75.544553,
+    "tipo": "cable"
+  },
+  {
+    "name": "El Progreso",
+    "lat": 6.305983,
+    "lon": -75.582265,
+    "tipo": "cable"
+  },
+  {
+    "name": "Envigado",
+    "lat": 6.174706,
+    "lon": -75.59705,
+    "tipo": "metro"
+  },
+  {
+    "name": "Estadio",
+    "lat": 6.253325,
+    "lon": -75.588234,
+    "tipo": "metro"
+  },
+  {
+    "name": "Exposiciones",
+    "lat": 6.238416,
+    "lon": -75.573166,
+    "tipo": "metro"
+  },
+  {
+    "name": "Floresta",
+    "lat": 6.258702,
+    "lon": -75.597743,
+    "tipo": "metro"
+  },
+  {
+    "name": "Hospital",
+    "lat": 6.263803,
+    "lon": -75.563396,
+    "tipo": "metro"
+  },
+  {
+    "name": "Industriales",
+    "lat": 6.230037,
+    "lon": -75.575633,
+    "tipo": "metro"
+  },
+  {
+    "name": "Itagüí",
+    "lat": 6.163001,
+    "lon": -75.606585,
+    "tipo": "metro"
+  },
+  {
+    "name": "Juan XXIII",
+    "lat": 6.265678,
+    "lon": -75.613695,
+    "tipo": "cable"
+  },
+  {
+    "name": "La Aurora",
+    "lat": 6.281151,
+    "lon": -75.613932,
+    "tipo": "cable"
+  },
+  {
+    "name": "Las Torres",
+    "lat": 6.236609,
+    "lon": -75.536339,
+    "tipo": "cable"
+  },
+  {
+    "name": "Loyola",
+    "lat": 6.239029,
+    "lon": -75.54514,
+    "tipo": "tranvia"
+  },
+  {
+    "name": "Madera",
+    "lat": 6.316004,
+    "lon": -75.555336,
+    "tipo": "metro"
+  },
+  {
+    "name": "Miraflores",
+    "lat": 6.241346,
+    "lon": -75.549035,
+    "tipo": "tranvia"
+  },
+  {
+    "name": "Niquía",
+    "lat": 6.337854,
+    "lon": -75.544265,
+    "tipo": "metro"
+  },
+  {
+    "name": "Oriente",
+    "lat": 6.233302,
+    "lon": -75.540091,
+    "tipo": "cable"
+  },
+  {
+    "name": "Pabellón del agua EPM",
+    "lat": 6.24562,
+    "lon": -75.561979,
+    "tipo": "tranvia"
+  },
+  {
+    "name": "Parque Berrío",
+    "lat": 6.250587,
+    "lon": -75.568174,
+    "tipo": "metro"
+  },
+  {
+    "name": "Poblado",
+    "lat": 6.211997,
+    "lon": -75.578121,
+    "tipo": "metro"
+  },
+  {
+    "name": "Popular",
+    "lat": 6.295152,
+    "lon": -75.548119,
+    "tipo": "cable"
+  },
+  {
+    "name": "Prado",
+    "lat": 6.256906,
+    "lon": -75.566137,
+    "tipo": "metro"
+  },
+  {
+    "name": "SENA",
+    "lat": 6.301863,
+    "lon": -75.567497,
+    "tipo": "cable"
+  },
+  {
+    "name": "San Antonio",
+    "lat": 6.247035,
+    "lon": -75.569148,
+    "tipo": "metro"
+  },
+  {
+    "name": "San Javier",
+    "lat": 6.256967,
+    "lon": -75.613911,
+    "tipo": "metro"
+  },
+  {
+    "name": "San José",
+    "lat": 6.24736,
+    "lon": -75.565378,
+    "tipo": "tranvia"
+  },
+  {
+    "name": "Santa Lucía",
+    "lat": 6.257996,
+    "lon": -75.603846,
+    "tipo": "metro"
+  },
+  {
+    "name": "Santo Domingo",
+    "lat": 6.292972,
+    "lon": -75.541802,
+    "tipo": "cable"
+  },
+  {
+    "name": "Suramericana",
+    "lat": 6.252968,
+    "lon": -75.582948,
+    "tipo": "metro"
+  },
+  {
+    "name": "Trece de Noviembre",
+    "lat": 6.247665,
+    "lon": -75.541364,
+    "tipo": "cable"
+  },
+  {
+    "name": "Tricentenario",
+    "lat": 6.290315,
+    "lon": -75.564711,
+    "tipo": "metro"
+  },
+  {
+    "name": "Universidad",
+    "lat": 6.269408,
+    "lon": -75.565808,
+    "tipo": "metro"
+  },
+  {
+    "name": "Vallejuelos",
+    "lat": 6.27539,
+    "lon": -75.613944,
+    "tipo": "cable"
+  },
+  {
+    "name": "Villa Sierra",
+    "lat": 6.234879,
+    "lon": -75.528701,
+    "tipo": "cable"
+  }
+]
