@@ -8,7 +8,7 @@ Secciones para integrar en el informe final. Las cifras marcadas como pendientes
 
 **Índice.** Cada sección `##` es un fragmento autocontenido (69 en total), con el texto "Título - Sección" antepuesto para que el fragmento conserve su contexto. Los embeddings se calculan con `paraphrase-multilingual-MiniLM-L12-v2`, un modelo multilingüe; el plan inicial proponía `all-MiniLM-L6-v2`, que está entrenado solo en inglés. Los vectores normalizados se guardan en un `faiss.IndexFlatIP`, equivalente a similitud coseno.
 
-**Recuperación híbrida.** Los embeddings solos fallaban con nombres propios (por ejemplo, "EAFIT"). Por eso cada consulta combina dos rankings de 20 candidatos: búsqueda semántica en FAISS y BM25 sobre texto sin tildes ni palabras vacías. Los rankings se fusionan con Reciprocal Rank Fusion (k = 60) y el agente recibe los 4 mejores fragmentos con sus fuentes.
+**Recuperación híbrida.** Los embeddings solos fallaban con nombres propios como "EAFIT". Por eso cada consulta combina dos rankings de 20 candidatos: búsqueda semántica en FAISS y BM25 sobre texto sin tildes ni palabras vacías. Los rankings se fusionan con Reciprocal Rank Fusion (k = 60) y el agente recibe los 4 mejores fragmentos con sus fuentes.
 
 **Herramientas.**
 
@@ -17,7 +17,7 @@ Secciones para integrar en el informe final. Las cifras marcadas como pendientes
 
 Ambas usan `content_and_artifact`: el LLM recibe un resumen corto (menos tokens) y el dashboard recibe los datos completos (coordenadas de la ruta y fragmentos con fuentes). Si una herramienta falla, el error vuelve al modelo como observación en lugar de detener el agente.
 
-**Loop agéntico.** Grafo de LangGraph con dos nodos en ciclo, `modelo` y `herramientas`, controlado por `tools_condition`. El modelo es `openai/gpt-oss-120b` en Groq, con temperatura 0. El límite de pasos es 25 (T_max): si se supera, el agente pide reformular la pregunta. Además, hace hasta 6 reintentos cuando Groq devuelve límite de tasa.
+**Loop agéntico.** El agente es un grafo de LangGraph con dos nodos en ciclo, `modelo` y `herramientas`, controlado por `tools_condition`. El modelo es `openai/gpt-oss-120b` en Groq, con temperatura 0. El límite de pasos es 25 (T_max): si se supera, el agente pide reformular la pregunta. Además, hace hasta 6 reintentos cuando Groq devuelve límite de tasa.
 
 **Prompt de sistema.** Reglas contra las alucinaciones observadas en la evaluación:
 
