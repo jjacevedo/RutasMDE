@@ -22,13 +22,13 @@ Equipo: Juan José Acevedo Otálvaro, Santiago Arellano y Juan Esteban Peña.
 
 - Elegir la idea, definir el alcance y tomar las decisiones de diseño (A\* con dos costos, búsqueda híbrida, herramientas del agente).
 - Recopilar las fuentes del corpus y verificar sus datos.
-- Ejecutar el código, las pruebas y la evaluación en nuestros equipos, y revisar los resultados.
+- Ejecutar el código, las pruebas y la evaluación en nuestros computadores, y revisar los resultados.
 - Revisar y corregir lo que produjeron las herramientas antes de integrarlo al repositorio.
 
-## Lo que no es uso de IA generativa como asistente
+## Modelos que hacen parte del sistema
 
-El agente del proyecto usa un modelo de lenguaje (`openai/gpt-oss-120b`, servido por Groq) y un modelo de embeddings (`paraphrase-multilingual-MiniLM-L12-v2`). Son componentes del sistema entregado, descritos en el informe, no herramientas de apoyo para elaborarlo.
+El agente del proyecto usa un modelo de lenguaje (`openai/gpt-oss-120b`, servido por Groq) y un modelo de embeddings (`paraphrase-multilingual-MiniLM-L12-v2`). Los dos son componentes del sistema entregado y están descritos en el informe. No los usamos como herramientas de apoyo para hacer el proyecto.
 
 ## Responsabilidad
 
-El equipo entiende el código y los documentos entregados y responde por su contenido. Las herramientas de IA no reemplazaron la verificación: los errores que encontró la revisión manual de la evaluación están reportados en el informe.
+Entendemos el código y los documentos que entregamos y respondemos por su contenido. Verificamos lo que produjeron las herramientas, y los errores que encontró la revisión manual de la evaluación están reportados en el informe.
