@@ -82,22 +82,27 @@ def build_route_map(
         if points else DEFAULT_CENTER
     )
     map_obj = folium.Map(location=center, zoom_start=13, control_scale=True, tiles="OpenStreetMap")
+    # Atenua los mosaicos de OSM para que la ruta y las estaciones destaquen.
+    map_obj.get_root().header.add_child(folium.Element(
+        "<style>.leaflet-tile-pane{filter:grayscale(.85) sepia(.12) brightness(1.04) contrast(.92);}</style>"
+    ))
     Fullscreen(position="topright").add_to(map_obj)
 
     if coords:
-        folium.PolyLine(coords, color="#2563eb", weight=6, opacity=0.88, tooltip="Ruta calculada por A*").add_to(map_obj)
+        folium.PolyLine(coords, color="#FFFFFF", weight=9, opacity=0.9).add_to(map_obj)
+        folium.PolyLine(coords, color="#33443A", weight=5, opacity=0.95, tooltip="Ruta calculada por A*").add_to(map_obj)
     if origin:
-        folium.Marker(origin, tooltip="Origen", popup=_popup_html({"name": route.get("origin_name", "Origen")}, "Origen"),
-                      icon=folium.Icon(color="green", icon="play")).add_to(map_obj)
+        folium.CircleMarker(origin, radius=8, color="#1C1B19", weight=3, fill=True, fill_color="#FFFFFF", fill_opacity=1,
+                            tooltip="Origen", popup=_popup_html({"name": route.get("origin_name", "Origen")}, "Origen")).add_to(map_obj)
     if destination:
-        folium.Marker(destination, tooltip="Destino", popup=_popup_html({"name": route.get("dest_name", "Destino")}, "Destino"),
-                      icon=folium.Icon(color="red", icon="flag")).add_to(map_obj)
+        folium.CircleMarker(destination, radius=8, color="#1C1B19", weight=3, fill=True, fill_color="#1C1B19", fill_opacity=1,
+                            tooltip="Destino", popup=_popup_html({"name": route.get("dest_name", "Destino")}, "Destino")).add_to(map_obj)
 
     if show_metro:
         layer = folium.FeatureGroup(name="Metro, tranvía y cables", show=True)
         for station in metro_stations if metro_stations is not None else load_metro_stations():
             folium.CircleMarker(
-                location=(station["lat"], station["lon"]), radius=5, color="#7c3aed",
+                location=(station["lat"], station["lon"]), radius=4, color="#8A5A44", weight=1,
                 fill=True, fill_opacity=0.9, tooltip=station.get("name", "Estación"),
                 popup=_popup_html(station, "Estación"),
             ).add_to(layer)
@@ -106,7 +111,7 @@ def build_route_map(
         layer = folium.FeatureGroup(name="EnCicla", show=True)
         for station in encicla_stations if encicla_stations is not None else load_encicla_stations():
             folium.CircleMarker(
-                location=(station["lat"], station["lon"]), radius=4, color="#0891b2",
+                location=(station["lat"], station["lon"]), radius=3, color="#4F6B7A", weight=1,
                 fill=True, fill_opacity=0.85, tooltip=station.get("name", "Estación EnCicla"),
                 popup=_popup_html(station, "Estación EnCicla"),
             ).add_to(layer)
@@ -116,6 +121,6 @@ def build_route_map(
         map_obj.fit_bounds(coords, padding=(24, 24))
     elif origin and destination:
         map_obj.fit_bounds([origin, destination], padding=(24, 24))
-    folium.LayerControl(collapsed=False).add_to(map_obj)
+    folium.LayerControl(collapsed=True).add_to(map_obj)
     return map_obj
 

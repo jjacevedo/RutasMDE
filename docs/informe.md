@@ -67,21 +67,21 @@ Se usan 15 preguntas fijas en 8 categorías (rutas, tarifas, horarios, pico y pl
 |---|---|---|---|---|---|
 | 1, versión inicial (ruta simulada) | no registrada | 13/15 | 10/13 | no medida | 17,7 s |
 | 2, prompt y corpus corregidos (ruta simulada) | 13/13 | 15/15 | 12/13 | 11/11 | 10,5 s |
-| Definitiva (A\* real) | 13/13 | 15/15 | 13/13 | 11/11 | 18,2 s |
+| 3, A\* real | 13/13 | 15/15 | 13/13 | 11/11 | 18,2 s |
+| Definitiva (A\* real, prompt y geocodificación corregidos) | 13/13 | 15/15 | 13/13 | 11/11 | 11,8 s |
 
 Los denominadores cambian porque no todas las métricas aplican a todas las preguntas.
 
-**Revisión manual.** Las métricas automáticas no detectan datos incorrectos agregados al texto, así que cada respuesta de la corrida definitiva se leyó y se contrastó con el corpus: 11 son correctas, 2 tienen imprecisiones menores y 2 tienen errores de contenido. Los dos errores:
+**Revisión manual.** Las métricas automáticas no detectan datos incorrectos agregados al texto, así que cada respuesta se leyó y se contrastó con el corpus. En la corrida 3 hubo 11 respuestas correctas, 2 con imprecisiones menores y 2 con errores de contenido: el agente ubicó a Laureles junto a la estación Universidad (es Estadio, Línea B) y llamó a Acevedo "terminal de la Línea A". Además, en pruebas del dashboard una ruta desde la "estación La Estrella" salió de un billar del mismo nombre.
 
-- En la ruta de Laureles a El Poblado, el agente agregó una alternativa en Metro que nadie pidió y ubicó a Laureles junto a la estación Universidad (Línea A); según el corpus es Estadio (Línea B).
-- En la ruta al Parque Arví, la secuencia de líneas es correcta, pero llamó a Acevedo "terminal de la Línea A", cuando las terminales son Niquía y La Estrella.
+La causa común era una regla del prompt que agregaba ", Medellín" a cada lugar. Se corrigió el prompt y la geocodificación ahora resuelve las estaciones del Metro desde los datos locales. En la corrida definitiva hay 13 respuestas correctas, 1 con imprecisión menor y 1 con error de contenido: en la ruta de EAFIT al Parque Explora las estaciones son correctas, pero el agente afirmó que el viaje completo toma de 20 a 25 minutos, un dato que no está en el corpus.
 
 En las dos primeras corridas la revisión manual había encontrado errores del mismo tipo ("San Javier, línea A" y estaciones inventadas hacia Arví). Se corrigieron reescribiendo fragmentos del corpus para que fueran autocontenidos y endureciendo el prompt; el dato clave pasó de 10/13 a 13/13.
 
 ## 6. Limitaciones
 
-- **Alucinaciones residuales.** El modelo a veces agrega datos de memoria aunque el prompt lo prohíbe (2 de 15 respuestas en la corrida definitiva). Las métricas automáticas marcaron esas respuestas como correctas.
-- **Límite de tasa.** El plan gratuito de Groq permite 8.000 tokens por minuto y una pregunta de ruta consume cerca de 6.400. Dos preguntas seguidas obligan a esperar: la latencia máxima fue de 82,7 s.
+- **Alucinaciones residuales.** El modelo a veces agrega datos de memoria aunque el prompt lo prohíbe (1 de 15 respuestas en la corrida definitiva, 2 en la anterior). Las métricas automáticas marcaron esas respuestas como correctas.
+- **Límite de tasa.** El plan gratuito de Groq permite 8.000 tokens por minuto y una pregunta de ruta consume cerca de 6.400. Dos preguntas seguidas obligan a esperar: la latencia llegó a 82,7 s en la corrida 3 y a 20,1 s en la definitiva.
 - **Tiempos de viaje.** El tiempo de A\* supone velocidad libre por tipo de vía, sin tráfico ni semáforos, y solo aplica a carro. El sistema no calcula rutas multimodales: los trayectos en Metro salen del corpus.
 - **Geocodificación.** Depende de Nominatim; algunos lugares conocidos no se encuentran por nombre (por ejemplo, "Parque Lleras") y el agente pide una dirección más precisa.
 - **Fuentes mostradas.** Se reportan los 2 primeros fragmentos de cada búsqueda aunque alguno no se use en la respuesta. La métrica de fuente mide si se recuperó el documento correcto, no si la respuesta se apoya en él.

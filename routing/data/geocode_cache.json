@@ -79,10 +79,20 @@
     "lon": -75.587415,
     "name": "Envigado"
   },
+  "estacion estrella": {
+    "lat": 6.1527424,
+    "lon": -75.6264457,
+    "name": "Estación de Metro de la Estrella, Carrera 48A"
+  },
   "estacion industriales": {
     "lat": 6.23,
     "lon": -75.57556,
     "name": "Estación Industriales (Metro línea A)"
+  },
+  "estacion la estrella": {
+    "lat": 6.1527424,
+    "lon": -75.6264457,
+    "name": "Estación de Metro de la Estrella, Carrera 48A"
   },
   "estacion niquia, bello": {
     "lat": 6.3393835,

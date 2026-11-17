@@ -32,7 +32,7 @@ def calcular_ruta(origen: str, destino: str, criterio: str = "distance") -> tupl
     """Calcula con A* la ruta por la red vial de Medellín entre dos lugares.
 
     Usar cuando el usuario quiere ir de un lugar a otro o pregunta distancias o tiempos de viaje.
-    origen y destino son nombres de lugares, idealmente con ", Medellín" al final.
+    origen y destino son nombres de lugares tal como los dio el usuario, por ejemplo "Estación Poblado".
     criterio es "distance" para la ruta más corta o "time" para la más rápida.
     """
     try:

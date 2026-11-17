@@ -11,6 +11,7 @@ Precargar la caché con los lugares de la evaluación:
 """
 
 import json
+import re
 import ssl
 import unicodedata
 from pathlib import Path
@@ -21,6 +22,7 @@ from geopy.extra.rate_limiter import RateLimiter
 from geopy.geocoders import Nominatim
 
 CACHE_PATH = Path(__file__).resolve().parent / "data" / "geocode_cache.json"
+STATIONS_PATH = Path(__file__).resolve().parent / "data" / "metro_stations.json"
 
 VIEWBOX = [(6.10, -75.72), (6.40, -75.45)]
 
@@ -31,6 +33,9 @@ _geolocator = Nominatim(user_agent="rutasmde-eafit-si3003", timeout=10,
                         ssl_context=ssl.create_default_context(cafile=certifi.where()))
 _geocode_limited = RateLimiter(_geolocator.geocode, min_delay_seconds=1.1, max_retries=2)
 _cache: dict | None = None
+_stations: dict | None = None
+
+_STATION_PREFIX = re.compile(r"^estacion( del?)?( metro)?( de)? ")
 
 
 def _normalize(text: str) -> str:
@@ -48,6 +53,28 @@ def _load_cache() -> dict:
     return _cache
 
 
+def _station(key: str) -> tuple[float, float, str] | None:
+    """Si el lugar es 'estación X' y X está en metro_stations.json, usa esas coordenadas.
+
+    Evita que Nominatim confunda una estación con otro sitio del mismo nombre.
+    Las estaciones que no están en el archivo siguen el camino normal.
+    """
+    global _stations
+    if not _STATION_PREFIX.match(key):
+        return None
+    if _stations is None:
+        try:
+            rows = json.loads(STATIONS_PATH.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            rows = []
+        _stations = {_normalize(row["name"]): row for row in rows}
+    name = _STATION_PREFIX.sub("", key).split(",")[0].strip()
+    row = _stations.get(name) or _stations.get(re.sub(r"^(la|el) ", "", name))
+    if row is None:
+        return None
+    return row["lat"], row["lon"], f"Estación {row['name']}"
+
+
 def _save_cache() -> None:
     CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
     CACHE_PATH.write_text(json.dumps(_load_cache(), ensure_ascii=False, indent=2, sort_keys=True),
@@ -59,6 +86,10 @@ def geocode_with_name(place: str) -> tuple[float, float, str]:
     key = _normalize(place)
     if not key:
         raise ValueError("El lugar está vacío")
+
+    station = _station(key)
+    if station is not None:
+        return station
 
     cache = _load_cache()
     if key in cache:
